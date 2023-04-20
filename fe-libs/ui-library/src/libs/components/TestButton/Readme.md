@@ -2,6 +2,8 @@
 
 > All props defined on MUI can be used with custom component
 
+> Note: You must wrap your application in a MUI Provider
+
 ```js
 import { Grid, Box } from '@mui/material'
 ;<Box
