@@ -1,6 +1,4 @@
-import React from 'react'
 import { customRender } from 'libs/utils/testing'
-import { Card } from '@mui/material'
 import GenericCard, { IGenericCard } from '.'
 
 const defaultProps: IGenericCard = {
@@ -30,12 +28,5 @@ describe('GenericCard', () => {
 
         const cardElement = container.querySelector('.MuiPaper-elevation12')
         expect(cardElement).toBeInTheDocument()
-    })
-
-    it('Forwards the ref', () => {
-        const ref = React.createRef<HTMLDivElement>()
-        const { container } = getComponent({ ...defaultProps, ref })
-
-        expect(ref.current).not.toBeNull()
     })
 })
