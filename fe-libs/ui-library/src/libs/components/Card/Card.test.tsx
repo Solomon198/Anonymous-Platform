@@ -1,14 +1,13 @@
 import { customRender } from 'libs/utils/testing'
-import GenericCard, { IGenericCard } from '.'
+import Card, { ICard } from '.'
 
-const defaultProps: IGenericCard = {
+const defaultProps: ICard = {
     children: 'Card Content',
 }
 
-const getComponent = (props: IGenericCard) =>
-    customRender(<GenericCard {...props} />)
+const getComponent = (props: ICard) => customRender(<Card {...props} />)
 
-describe('GenericCard', () => {
+describe('Card', () => {
     it('Renders', () => {
         const { container } = getComponent(defaultProps)
         expect(container).toBeInstanceOf(HTMLElement)

@@ -1,6 +1,6 @@
-# GenericCard
+# Card
 
-`GenericCard` is a simple wrapper component around Material-UI's `Card` component, which adds custom props and retains all Material-UI `Card` props.
+`Card` is a simple wrapper component around Material-UI's `Card` component, which adds custom props and retains all Material-UI `Card` props.
 
 ## Props
 
@@ -12,14 +12,14 @@
 ```jsx
 import React from 'react'
 import { Box } from '@mui/material'
-import GenericCard from './GenericCard'
+import Card from './Card'
 
 const App = () => {
     return (
         <Box sx={{ m: 2 }}>
-            <GenericCard elevation={3} sx={{ p: 2 }}>
+            <Card elevation={3} sx={{ p: 2 }}>
                 This is the content of the card.
-            </GenericCard>
+            </Card>
         </Box>
     )
 }

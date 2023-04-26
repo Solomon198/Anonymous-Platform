@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { GenericCard } from 'libs/components'
+import { Card } from 'libs/components'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
@@ -14,9 +14,9 @@ const Playground: FC = () => {
             }}
         >
             <Box width={300}>
-                <GenericCard elevation={3} sx={{ p: 2 }}>
+                <Card elevation={3} sx={{ p: 2 }}>
                     This is the content of the card.
-                </GenericCard>
+                </Card>
             </Box>
         </Container>
     )

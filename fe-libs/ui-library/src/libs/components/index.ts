@@ -1,6 +1,6 @@
 import TestButton from './TestButton'
-import GenericCard from './GenericCard'
+import Card from './Card'
 export * from './Theme'
 export { createIconContext, type IIconNames, type TIconNames } from './Icon'
 
-export { TestButton, GenericCard }
+export { TestButton, Card }
