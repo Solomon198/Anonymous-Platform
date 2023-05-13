@@ -1,4 +1,4 @@
-## Theme Component
+## Theme
 
 > To use this theme component Simply import `ThemeProvider` and pass theme configuration base on `mui` `ThemeOption`
 > You can also overide or extend some of the following props exposed by this generic theme component such as `ThemeOption`, `Theme`;

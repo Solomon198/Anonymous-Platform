@@ -7,12 +7,8 @@ export interface ICard extends CardProps {
 }
 
 const Card = (props: ICard): JSX.Element => {
-    const { ref, children, ...otherProps } = props
-    return (
-        <MaterialCard {...otherProps} ref={ref}>
-            {children}
-        </MaterialCard>
-    )
+    const { children, ...otherProps } = props
+    return <MaterialCard {...otherProps}>{children}</MaterialCard>
 }
 
 export default Card

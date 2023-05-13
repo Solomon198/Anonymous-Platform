@@ -1,8 +1,29 @@
+## Button
+
+All props defined on MUI is applicable to this button component.
+
+-   **`Note:`** You must wrap your application in a MUI Provider
+
+-   **`Note`** the icon and the loader component takes your theme configuration. please take a look at the theme configuration. we tried to handle loader color when variant is `contained`, `outlined` and `text` so that our loader works out of the box. Please take a look at the implementation of this button component.
+
+## Button Props
+
+| props            | value          | description                                   |
+| ---------------- | -------------- | --------------------------------------------- |
+| loaderSize?      | number         | control loader size                           |
+| loaderColor?     | string         | overides theme and gives loader desired color |
+| loading?         | boolean        | show or hides loader                          |
+| loaderposition?  | `right` `left` | display loader to right or left               |
+| textLoaderSpace? | number         | space between loader and text                 |
+| data-testid?     | string         | component test id                             |
+| text             | string         | text value for component                      |
+
+```js
 import { type FC } from 'react'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
-import Button from '../../libs/components/Button'
-import { FileUpload } from '../../libs/components/Icon/defaultIconImport.unicorn'
+import Button from 'from-ui-library'
+import { FileUpload } from 'from-default-exported-component'
 
 const Playground: FC = () => {
     return (
@@ -202,3 +223,4 @@ const Playground: FC = () => {
 }
 
 export default Playground
+```

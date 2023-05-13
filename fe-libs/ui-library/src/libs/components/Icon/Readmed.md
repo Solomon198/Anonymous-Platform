@@ -1,6 +1,14 @@
-##### Example:
+##### Icon
 
-> You have to create context from the method `createIconContext` exposed from this component and pass your icons pack to the context then you can use the `Icon` component returned by the `createIconContext` and wrap your application around the `Provider` returned also
+-   You have to create context from the method `createIconContext` exposed from this component and pass your icons pack to the context then you can use the `Icon` component returned by the `createIconContext` and wrap your application around the `Provider` returned also;
+
+-   For the icon context provider the `icons` props from pack needs to be passed.
+
+| props  | value  | description                                                          |
+| ------ | ------ | -------------------------------------------------------------------- |
+| size?  | number | size of icon                                                         |
+| color? | string | color of icon matching theme configured colors `primary`,`secondary` |
+| name   | string | Icon name as exported from Icon pack configured                      |
 
 ```js
 // doSomeWhere.js

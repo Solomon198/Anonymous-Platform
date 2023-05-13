@@ -10,6 +10,26 @@ declare module '@mui/material/styles' {
     interface ThemeOptions {
         toggle?: () => void
     }
+
+    interface PaletteOptions {
+        buttonSpinner: {
+            contained: string
+            outlined: string
+            text: string
+        }
+    }
+
+    interface Palette {
+        buttonSpinner: {
+            contained: string
+            outlined: string
+            text: string
+        }
+    }
+
+    interface PaletteColor {
+        dark: string
+    }
 }
 
 export enum ThemeType {
@@ -29,6 +49,11 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       primary: { main: '#000000' },
                       secondary: { main: amber['100'] },
                       divider: amber[200],
+                      buttonSpinner: {
+                          contained: '#ffffff',
+                          outlined: '#000000',
+                          text: '#000000',
+                      },
                       text: {
                           primary: '#000000',
                           secondary: grey[800],
@@ -43,6 +68,11 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       primary: { main: '#ffffff' },
                       secondary: { main: '#66aabb' },
                       divider: deepOrange[700],
+                      buttonSpinner: {
+                          contained: '#000000',
+                          outlined: '#ffffff',
+                          text: '#ffffff',
+                      },
                       background: {
                           default: '#000000',
                           paper: '#111111',

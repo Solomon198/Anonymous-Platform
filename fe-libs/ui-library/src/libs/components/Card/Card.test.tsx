@@ -1,11 +1,12 @@
-import { customRender } from 'libs/utils/testing'
-import Card, { ICard } from '.'
+import { customRender, type RenderResult } from '../../../libs/utils/testing'
+import Card, { type ICard } from '.'
 
 const defaultProps: ICard = {
     children: 'Card Content',
 }
 
-const getComponent = (props: ICard) => customRender(<Card {...props} />)
+const getComponent = (props: ICard): RenderResult =>
+    customRender(<Card {...props} />)
 
 describe('Card', () => {
     it('Renders', () => {
