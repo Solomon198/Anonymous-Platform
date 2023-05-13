@@ -83,5 +83,10 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       },
                   }),
         },
+        typography: {
+            fontFamily: 'Roboto', // default font family
+            fontSize: 14, // default font size
+            fontWeightBold: 700, // default font weight for bold text
+        },
     }
 }

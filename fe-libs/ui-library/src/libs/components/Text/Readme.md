@@ -1,3 +1,10 @@
+# Text
+
+This text component is just an extention of the MUI Typography, it is heavily tested against major usages.
+
+-   **`Note`** This `Text` Component has all Material UI props. Feel free to use any props from MUI props, its available.
+
+```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'
 import Text from '../../libs/components/Text'
@@ -7,8 +14,10 @@ const Playground: FC = () => {
         <Container
             sx={{
                 display: 'flex',
+                justifyContent: 'space-evenly',
+                alignContent: 'center',
+                alignItems: 'center',
                 flexDirection: 'column',
-                justifyContent: 'space-around',
             }}
         >
             <Text color="primary" variant="h3">
@@ -35,3 +44,4 @@ const Playground: FC = () => {
 }
 
 export default Playground
+```
