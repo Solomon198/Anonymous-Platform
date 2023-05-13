@@ -1,3 +1,4 @@
+import { type Color } from '@mui/material'
 import { type ComponentType } from 'react'
 
 export interface IIconNames {
@@ -51,7 +52,7 @@ export type TIconNames = keyof IIconNames
 export type TimportedIcomComponent = ComponentType<{
     className?: string
     size?: string | number
-    color?: string
+    color?: Color
 }>
 
 export type TIconContext = Record<string, TimportedIcomComponent>

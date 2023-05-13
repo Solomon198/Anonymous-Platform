@@ -4,6 +4,12 @@ import { amber, grey, deepOrange } from '@mui/material/colors'
 declare module '@mui/material/styles' {
     interface Theme {
         toggle: () => void
+        primary: {
+            main: string
+        }
+        secondary: {
+            main: string
+        }
     }
 
     // allow configuration using `createTheme`

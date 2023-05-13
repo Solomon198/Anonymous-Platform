@@ -1,16 +1,18 @@
 import { useContext, createContext, type FC } from 'react'
-import { useTheme } from '@mui/material'
+
+import { useTheme, type Color } from '@mui/material'
 
 import type { IIconNames, TIconContext, TIconNames } from './type'
 
-import { type ColorNames } from '../Theme'
 import { getPalleteColor } from './utils'
+
+import { type ColorNames } from '../Theme'
 
 export type { IIconNames, TIconContext, TIconNames }
 
 export interface IBaseIconProps {
     /** Specify color as available in theme */
-    color?: ColorNames | 'inherit'
+    color?: ColorNames | Color
     /** Specify size in pixel */
     size?: string | number
     /** Specify name of icon from icon pack */
@@ -29,8 +31,8 @@ const useIcons = (): TIconContext => {
 }
 
 const Icon = (props: IBaseIconProps): JSX.Element => {
-    const theme = useTheme()
     const { name, size, color = 'primary' } = props
+    const theme = useTheme()
     const icons = useIcons()
     const SelectedIcon = icons[name]
     if (SelectedIcon === undefined || SelectedIcon === null) {

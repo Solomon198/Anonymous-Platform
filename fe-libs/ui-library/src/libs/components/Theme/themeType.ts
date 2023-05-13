@@ -1,8 +1,9 @@
 export const colorNames = [
     'primary',
     'secondary',
-    'text',
-    'background',
-    'divider',
+    'error',
+    'warning',
+    'info',
+    'success',
 ] as const
 export type ColorNames = (typeof colorNames)[number]

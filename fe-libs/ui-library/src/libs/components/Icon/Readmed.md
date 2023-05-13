@@ -4,6 +4,8 @@
 
 -   For the icon context provider the `icons` props from pack needs to be passed.
 
+-   Note don't pass this icon to `startIcon` or `endIcon` of the Button component. It will not adjust well with variant `contained` on the button component but works well with other variant. Note this incase you still want to use it. To be safe and not have to worry about anything Just import the Icon like you will from your default export and pass it to Button component.
+
 | props  | value  | description                                                          |
 | ------ | ------ | -------------------------------------------------------------------- |
 | size?  | number | size of icon                                                         |

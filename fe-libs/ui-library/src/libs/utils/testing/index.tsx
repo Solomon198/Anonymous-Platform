@@ -8,7 +8,11 @@ import { MemoryRouter } from 'react-router-dom'
 import ThemeProvider from 'theme'
 import { IconProvider } from '../../../components/Icon'
 
-const AllProviders = ({ children }: any): JSX.Element => (
+const AllProviders = ({
+    children,
+}: {
+    children: React.ReactElement
+}): JSX.Element => (
     <MemoryRouter>
         <IconProvider>
             <ThemeProvider>{children}</ThemeProvider>

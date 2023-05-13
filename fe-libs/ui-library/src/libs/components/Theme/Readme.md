@@ -16,11 +16,7 @@ import {
 } from '../genericTheme' // import from where generic theme is exported
 import { ThemeType, themeDefination, type Modes } from './theme'
 
-interface Props {
-    children: JSX.Element | any | JSX.Element[];
-}
-
-const ThemeProvider = ({ children }: Props): JSX.Element => {
+const ThemeProvider = ({ children }: React.ReactElement): JSX.Element => {
     const [mode, setMode] = useState < Modes > ThemeType.light
     const toggle = (): void => {
         const nextMode =
