@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import Container from '@mui/material/Container'
-import Rating from '../../libs/components/Rating'
+import { Pagination } from '../../libs/components'
 
 const Playground: FC = () => {
     return (
@@ -11,9 +11,7 @@ const Playground: FC = () => {
                 justifyContent: 'space-around',
             }}
         >
-            <Rating value={3.4} totalCount={1200} />
-            <Rating value={5} totalCount={160034345} />
-            <Rating totalCount={16033444045} />
+            <Pagination color="primary" variant="text" count={10} />
         </Container>
     )
 }
