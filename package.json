@@ -11,10 +11,11 @@
     "lerna": "^6.5.1"
   },
   "scripts": {
-    "build:libs": "npm run clean; npm ci; lerna run",
+    "build:libs": "npm run clean; npm ci; lerna run build",
     "clean": "npm run clean:node_modules; npm run clean:build",
     "clean:build": "find . -name 'build' -type d -prune -print -exec rm -rf '{}' \\;",
     "clean:node_modules": "find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \\;",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "test": "lerna run test"
   }
 }
