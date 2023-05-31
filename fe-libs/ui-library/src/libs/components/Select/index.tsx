@@ -2,34 +2,28 @@ import MaterialSelect, { type SelectProps } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 
+const defaultPlaceHolderText = 'Select'
 interface ISelectData {
     label: string
     value: string | number
 }
+
 export interface ISelectProps extends SelectProps {
     data: ISelectData[]
 }
 
 const Select = (props: ISelectProps): JSX.Element => {
-    const { data, placeholder } = props
-    const selectPlaceHolder = { label: 'Select', value: 'Select' }
+    const { data, placeholder = defaultPlaceHolderText, ...restProps } = props
+    const placeHolderText =
+        placeholder == null ? defaultPlaceHolderText : placeholder
+    const selectPlaceHolder = { label: placeHolderText, value: placeHolderText }
 
     return (
-        <FormControl fullWidth>
-            <MaterialSelect
-                sx={{
-                    borderRadius: 10,
-                    '&.Mui-focused': {
-                        bgcolor: 'transparent',
-                        color: 'transparent',
-                    },
-                }}
-            >
+        <FormControl focused={false} fullWidth>
+            <MaterialSelect defaultValue={placeHolderText} {...restProps}>
                 {[selectPlaceHolder, ...data].map(({ label, value }) => (
                     <MenuItem
-                        disabled={
-                            value === props.value || placeholder === value
-                        }
+                        disabled={placeholder === value}
                         key={value}
                         value={value}
                     >
