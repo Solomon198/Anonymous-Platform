@@ -15,10 +15,6 @@ const Playground: FC = () => {
         >
             <Box width={200}>
                 <Select
-                    disabled
-                    onMouseDown={() => {
-                        alert('hey')
-                    }}
                     IconComponent={KeyboardArrowDownIcon}
                     data={[
                         { label: 'Male', value: 'male' },
