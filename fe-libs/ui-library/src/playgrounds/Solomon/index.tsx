@@ -1,8 +1,8 @@
 import { type FC } from 'react'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
-import Select from '../../libs/components/Select'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import { CheckBox } from '../../libs/components'
+import { BpCheckedIcon, BpIcon } from '../../components/customCheckBoxIcons'
 
 const Playground: FC = () => {
     return (
@@ -14,14 +14,10 @@ const Playground: FC = () => {
             }}
         >
             <Box width={200}>
-                <Select
-                    IconComponent={KeyboardArrowDownIcon}
-                    data={[
-                        { label: 'Male', value: 'male' },
-                        { label: 'Female', value: 'female' },
-                    ]}
-                    style={{ borderRadius: 50 }}
-                />
+                <CheckBox icon={<BpIcon />} checkedIcon={<BpCheckedIcon />} />
+            </Box>
+            <Box width={200}>
+                <CheckBox />
             </Box>
         </Container>
     )
