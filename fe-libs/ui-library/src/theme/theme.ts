@@ -53,7 +53,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                 ? {
                       // palette values for light mode
                       primary: { main: '#000000' },
-                      secondary: { main: amber['100'] },
+                      secondary: { main: '#9c27b0' },
                       divider: amber[200],
                       buttonSpinner: {
                           contained: '#ffffff',
@@ -72,7 +72,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                 : {
                       // palette values for dark mode
                       primary: { main: '#ffffff' },
-                      secondary: { main: '#66aabb' },
+                      secondary: { main: '#9c27b0' },
                       divider: deepOrange[700],
                       buttonSpinner: {
                           contained: '#000000',
