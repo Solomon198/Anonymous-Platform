@@ -1,9 +1,12 @@
 name: builder
-run-name: ${{ github.actor}} ran monorepo maintainace jobs
+run-name: ${{ github.actor}} ran monorepo maintainace
 on:
   pull_request:
     branches:
       - "*"
+  push:
+    branches:
+      - master
 
 jobs:
   project-maintainance:

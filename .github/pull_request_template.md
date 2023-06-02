@@ -2,8 +2,6 @@
 
 Please include a summary of the change or which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-Fixes # (issue)
-
 ## Type of change
 
 Please delete options that are not relevant.
@@ -13,16 +11,16 @@ Please delete options that are not relevant.
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
-## Type of change
-
-Please attatch screenshots of what you have done.
+## Please attatch screenshots of what you have done.
 
 # How Has This Been Tested?
 
 Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
 
-- [ ] Test A
-- [ ] Test B
+
+# Please select as applicable which test was run
+- [ ] Unit test
+- [ ] Git pre-commit and pre-push hooks
 
 # Test Screen Shots
 
@@ -44,4 +42,3 @@ Screen shots of tests conducted
 - [ ] My changes generate no new warnings
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
