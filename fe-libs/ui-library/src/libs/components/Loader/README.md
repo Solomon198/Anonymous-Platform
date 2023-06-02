@@ -2,6 +2,8 @@
 
 -   The loader component uses the material UI loaders combine which is the `LinearProgress` and the `CircularProgresss`. The generic component accepts the `loader` props with value of `Linear` or `Circular` and extends the `LinearProgressProps` and the `CircularProgressProps`. When `loader` props is passed the right component is returned. `Note` that all MUI props for Circular and Linear Progress can be passed to this generic component.
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Box from '@mui/material/Box'

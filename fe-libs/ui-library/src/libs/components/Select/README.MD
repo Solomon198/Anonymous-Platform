@@ -12,6 +12,8 @@ All props defined on MUI is applicable to this select component.
 | ----- | ----------------------------- | --------------------------------- |
 | data  | {label:string,value:string}[] | data to display as select options |
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'

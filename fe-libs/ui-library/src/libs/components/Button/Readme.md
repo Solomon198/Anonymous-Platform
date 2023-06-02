@@ -18,6 +18,8 @@ All props defined on MUI is applicable to this button component.
 | data-testid?     | string         | component test id                             |
 | text             | string         | text value for component                      |
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Box from '@mui/material/Box'

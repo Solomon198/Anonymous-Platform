@@ -12,6 +12,8 @@ All props defined on MUI is applicable to this checkbox component.
 | ----------- | ------ | ------------------------------------ |
 | data-testid | string | data testid for the select component |
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'

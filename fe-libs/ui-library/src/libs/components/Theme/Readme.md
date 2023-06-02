@@ -8,6 +8,8 @@
 
 **Configure Theme Like This**
 
+## Example
+
 ```js
 import { useState } from 'react'
 import {

@@ -12,6 +12,8 @@
 | color? | string | color of icon matching theme configured colors `primary`,`secondary` |
 | name   | string | Icon name as exported from Icon pack configured                      |
 
+## Example
+
 ```js
 // doSomeWhere.js
 // do this first somewhere in your application

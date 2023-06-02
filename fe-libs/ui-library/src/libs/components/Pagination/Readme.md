@@ -17,6 +17,8 @@ All props defined on MUI is applicable to this Pagination component.
 | selectedTextColor?     | string      | set the text color for selected or active item                                                  |
 | data-testid?           | string      | component test id                                                                               |
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'

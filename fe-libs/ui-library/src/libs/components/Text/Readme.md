@@ -4,6 +4,8 @@ This text component is just an extention of the MUI Typography, it is heavily te
 
 -   **`Note`** This `Text` Component has all Material UI props. Feel free to use any props from MUI props, its available.
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'

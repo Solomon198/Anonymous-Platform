@@ -10,6 +10,8 @@ The rating component extends the props of MUI Rating component. It has all the t
 | rateColor?      | MUI Color | Color for the value of the rate.                                                      |
 | totalCountColor | MUI Color | Value for the color of the total count at the right of the rating component.          |
 
+## Example
+
 ```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'
