@@ -6,6 +6,7 @@ import Pagination, { type IPagination } from './Pagination'
 import Select, { type ISelectProps } from './Select'
 import CheckBox, { type ICheckBoxProps } from './CheckBox'
 import Tab, { TabPanel, type ITab } from './Tab'
+import TextArea, { type ITextArea } from './TextArea'
 export * from './Theme'
 export { Loader } from './Loader'
 export { createIconContext, type IIconNames, type TIconNames } from './Icon'
@@ -17,3 +18,4 @@ export { Pagination, type IPagination }
 export { Select, type ISelectProps }
 export { CheckBox, type ICheckBoxProps }
 export { Tab, TabPanel, type ITab }
+export { TextArea, type ITextArea }

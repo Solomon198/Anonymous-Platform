@@ -1,3 +1,12 @@
+# TextArea
+
+This textArea component is just an extention of the MUI `TextareaAutosize`, it is heavily tested against major user action usages.
+
+-   **`Note`** This `Text` Component has all Material UI props. Feel free to use any props from `TextareaAutosize` MUI props, its available.
+
+## Example
+
+```js
 import { type FC } from 'react'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
@@ -24,3 +33,4 @@ const Playground: FC = () => {
 }
 
 export default Playground
+```
