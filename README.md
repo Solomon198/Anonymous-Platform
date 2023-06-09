@@ -1,23 +1,62 @@
-#### Monorepo Setup
+#### 1. Monorepo Setup
 
 To start using the monorepo the following instruction will help you kickstart using the monorepo
 
+#### 2. Intial Setup
 
-## Intial Setup
->Run `npm install` on the project root directory to install packages on the monorepo and all workspaces.
+- Assuming you have not `cloned` this repo before, you can run the following on the directory you want to manage project.
 
-> Run `git config --local include.path ../.gitconfig
-` on the monorepo root directory 
+```bash
+  git clone https://github.com/dixre-products/Products.git
+```
 
-## Project Management Scripts
+- To install all dependecies in all workspaces run the following command. make sure you run this command to ensure that all dependencies are synced.
 
-> `npm run clean` deletes build and node_modules directory in the monorepo
-> `npm run lint` to run lint for the entire project
+```bash
+  npm ci
+```
 
-> `npm run build:libs` to build all monoropo libraries or workspaces. You can also run `npm run build --workspaces`
+#### 3. Setting up pre-push and pre-commit hooks
 
-> `npm run clean:node_modules` deletes all node_modules directories in the monorepo
+- Run `git config --local include.path ../.gitconfig` on the monorepo root directory
 
-> `npm run clean:build` deletes all build folders in the monorepo.
+#### 4. Project Management Scripts
 
+- To deletes `build`, `dist` and `node_modules` directory in the monorepo run
 
+```bash
+   npm run clean
+```
+
+- To run lint for the entire project run
+
+```bash
+npm run lint
+```
+
+- `Note` Since we are using a monorepo this command is important for you to this command before attempting to run any main project(frontends,backends). because each of the frontends and backends will rely on packages to be built before they can run in `developement` or during production build. In cases where you update any shared library you have to run this command before starting the main project.
+
+```bash
+npm run build:libs
+```
+
+- To deletes all node_modules directories in the monorepo run
+
+```bash
+npm run clean:node_modules
+```
+
+- To run test in all the monorepo you can run this
+
+```bash
+ npm run test
+```
+
+## Runing Click Academic
+
+- To run the project you have run the following in the monorepo root directory. Incase you don't want to run project from the monorepo root directory, you can build the libraries and then navigate to the project you want and start it.
+
+```bash
+npm run build:libs # build libraries in the monorepo
+npm run start:clickacademic
+```

@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+## @dixre/ui-library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the ui-library that allows us to build reusable react components that we can share throughout the monorepo.
 
-## Available Scripts
+`Note`
 
-In the project directory, you can run:
+-   We use this library directly in our frontends which means changes made here are immediately applied and not versioned, we might decide to change this design and publish to `npm repository` in the future.
+-   The components here are highly reusable and are subject to change as far as changes don't defy any of our rules.
 
-### `npm start`
+## Setting up Library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To setup library simply run `npm i` or ignore if you have run `npm ci` from the root directory of the monorepo. Regardeless follow this commands and you should be fine.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+  npm i ## install dependecies
+  npm run start # starts the ui-library
+```
 
-### `npm test`
+## How to contribute
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In other to contribute to this library please follow the guidelines.
 
-### `npm run build`
+-   Goto the `src/playgrounds` copy a playground e.g `Chatto` and change the folder name to your name e.g Somebody
+-   Goto `src/playgrounds/index.ts` and import your folder and add it to the exports like this
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+import Solomon from './Solomon'
+import Chatto from './Chatto'
+import Somebody from './Somebody'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default {
+    Solomon,
+    Chatto,
+    Somebody,
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+That is it!. save and you will see your name at the left side of the menu. click on your workspace to see the content.you can modify the content of `index.tsx` on your folder and see how it changes.
 
-### `npm run eject`
+-   There is also a moon icon at the top left corner, you can toggle it change theme of the application. Any component you build must adhere to theme convention, the toggle is there to help you see that your component is compatible with theme.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Scripts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To test library the following command. You can apply all jest command option to test as you desire.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run test # run all test in the library
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To build project simply run the following
 
-## Learn More
+```bash
+ npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Other scripts are available in the package.json scripts.
