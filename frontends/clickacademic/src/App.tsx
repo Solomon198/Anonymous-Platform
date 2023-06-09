@@ -2,10 +2,10 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { Text } from '@dixre/ui-library'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 
 function App(): JSX.Element {
-    const { t } = useTranslation()
+    // const { t } = useTranslation()
     return (
         <div className="App">
             <header className="App-header">
@@ -23,7 +23,7 @@ function App(): JSX.Element {
                 </a>
             </header>
             <Text variant="h1">Welcome and working</Text>
-            <Text>{t('common:homepage:title')}</Text>
+            {/* <Text>{t('common:homepage:title')}</Text> */}
         </div>
     )
 }

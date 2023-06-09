@@ -20,7 +20,7 @@ export default [
       }
     ],
     external: id =>
-      [...Object.keys(pkg.dependencies),'tslib'].some(name =>
+      [...Object.keys(pkg.dependencies),"@mui",'tslib'].some(name =>
         id.startsWith(name),
       ),
     plugins: [

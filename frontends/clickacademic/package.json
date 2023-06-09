@@ -15,6 +15,8 @@
     "rimraf": "^4.4.1"
   },
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@dixre/ui-library": "file:../../fe-libs/ui-library",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^4.5.8",
@@ -54,7 +56,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --detectOpenHandles",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
