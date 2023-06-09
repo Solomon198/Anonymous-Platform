@@ -21,7 +21,7 @@ const CustomInput = React.forwardRef(function CustomInput(
     )
 })
 
-const Input = (props: InputProps): JSX.Element => {
+const Input: React.FC<InputProps> = (props: InputProps): JSX.Element => {
     return <CustomInput {...props} />
 }
 export { type InputProps }

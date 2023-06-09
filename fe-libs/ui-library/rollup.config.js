@@ -19,10 +19,15 @@ export default [
         "src/libs/components/Icon/defaultIconImport.unicorn.ts"
       }
     ],
+    external: id =>
+      [...Object.keys(pkg.dependencies),'tslib'].some(name =>
+        id.startsWith(name),
+      ),
     plugins: [
       multiInput(),
       resolve(),
-      typescript2({ tsconfig: path.resolve(__dirname,"src/libs/tsconfig.json") }),
+
+      typescript2({ tsconfig: path.resolve(__dirname,"src/libs/tsconfig.json")}),
       babel({
         babelHelpers: "bundled",
         plugins: ["annotate-pure-calls"],
@@ -38,7 +43,7 @@ export default [
         format: "esm",
         sourcemap: true,
         preserveModules: true,
-        preserveModulesRoot: "src/lib",
+        preserveModulesRoot: "src/libs",
       },
     ],
   },

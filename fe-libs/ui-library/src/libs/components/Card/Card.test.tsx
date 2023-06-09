@@ -1,4 +1,4 @@
-import { customRender, type RenderResult } from '../../../libs/utils/testing'
+import { customRender, type RenderResult } from '../../utils/testing'
 import Card, { type ICard } from '.'
 
 const defaultProps: ICard = {

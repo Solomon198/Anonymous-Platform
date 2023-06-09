@@ -1,5 +1,5 @@
 import React from 'react'
-import Playground from 'playgrounds'
+import Playground from './playgrounds'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'

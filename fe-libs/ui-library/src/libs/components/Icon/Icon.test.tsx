@@ -1,5 +1,4 @@
-import { customRender, type RenderResult } from 'libs/utils/testing'
-import { Icon } from '../../../components/Icon/'
+import { customRender, type RenderResult, Icon } from '../../utils/testing'
 import { type IBaseIconProps } from '.'
 
 const defaultProps: IBaseIconProps = {

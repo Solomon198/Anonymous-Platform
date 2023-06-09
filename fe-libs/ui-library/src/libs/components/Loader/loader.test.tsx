@@ -1,4 +1,4 @@
-import { customRender, type RenderResult } from 'libs/utils/testing'
+import { customRender, type RenderResult } from '../../utils/testing'
 import { Loader } from '../Loader'
 import { type ILoaderCircularProps, type ILoaderLinearProps } from '.'
 

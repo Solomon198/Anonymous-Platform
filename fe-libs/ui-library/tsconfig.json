@@ -9,8 +9,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "types": ["jest"],
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -22,7 +24,8 @@
     "baseUrl": "src",
     "outDir": "./dist",
     "noUnusedParameters": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "typeRoots": ["../../node_modules/@types", "custom_typings"]
   },
   "include": [
     "src"

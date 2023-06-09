@@ -1,4 +1,4 @@
-import { customRender, type RenderResult, fireEvent } from 'libs/utils/testing'
+import { customRender, type RenderResult, fireEvent } from '../../utils/testing'
 import Text, { type TTypographyProps } from '.'
 
 const textContent = 'Dixre'

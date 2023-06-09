@@ -1,3 +1,4 @@
+import React from 'react'
 import {
     Rating as MaterialRating,
     type RatingProps,
@@ -16,7 +17,7 @@ export interface IRating extends RatingProps {
     'data-testid'?: string
 }
 
-const Rating = (props: IRating): JSX.Element => {
+const Rating: React.FC<IRating> = (props: IRating): JSX.Element => {
     const {
         totalCount = 0,
         value = 0,

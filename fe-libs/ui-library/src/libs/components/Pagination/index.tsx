@@ -1,3 +1,4 @@
+import React from 'react'
 import MaterialPagination, {
     type PaginationProps,
 } from '@mui/material/Pagination'
@@ -15,7 +16,7 @@ export interface IPagination extends PaginationProps {
     'data-testid'?: string
 }
 
-const Pagination = (props: IPagination): JSX.Element => {
+const Pagination: React.FC<IPagination> = (props: IPagination): JSX.Element => {
     const {
         shape = 'rounded',
         paginationItemSx = {},

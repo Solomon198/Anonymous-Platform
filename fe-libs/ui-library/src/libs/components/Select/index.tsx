@@ -1,3 +1,4 @@
+import React from 'react'
 import MaterialSelect, { type SelectProps } from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
@@ -12,7 +13,7 @@ export interface ISelectProps extends SelectProps {
     data: ISelectData[]
 }
 
-const Select = (props: ISelectProps): JSX.Element => {
+const Select: React.FC<ISelectProps> = (props: ISelectProps): JSX.Element => {
     const { data, placeholder = defaultPlaceHolderText, ...restProps } = props
     const placeHolderText =
         placeholder == null ? defaultPlaceHolderText : placeholder

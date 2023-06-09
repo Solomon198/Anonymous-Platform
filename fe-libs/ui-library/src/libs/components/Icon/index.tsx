@@ -1,4 +1,4 @@
-import { useContext, createContext, type FC } from 'react'
+import React, { useContext, createContext } from 'react'
 
 import { useTheme, type Color } from '@mui/material'
 
@@ -56,14 +56,14 @@ interface IcreateIconContextProps {
 }
 
 interface contextReturnType {
-    Provider: FC<{ children: JSX.Element }>
+    Provider: React.FC<{ children: JSX.Element }>
     Icon: (props: IBaseIconProps) => JSX.Element
 }
 
 export const createIconContext = ({
     icons,
 }: IcreateIconContextProps): contextReturnType => {
-    const Provider: FC<{ children: JSX.Element }> = ({
+    const Provider: React.FC<{ children: JSX.Element }> = ({
         children,
     }): JSX.Element => {
         return (

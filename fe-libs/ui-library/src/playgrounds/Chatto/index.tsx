@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { Card } from 'libs/components'
+import { Card } from '../../libs/components'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 

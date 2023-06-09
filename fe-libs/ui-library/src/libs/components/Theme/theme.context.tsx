@@ -1,3 +1,4 @@
+import React from 'react'
 import {
     useTheme as MuiUseTheme,
     type Theme as MuiTheme,
@@ -6,7 +7,6 @@ import {
     styled as muiStyled,
     type ThemeOptions as MuiThemeOption,
 } from '@mui/material'
-import React from 'react'
 
 export type Theme = MuiTheme
 export type ThemeOptions = MuiThemeOption

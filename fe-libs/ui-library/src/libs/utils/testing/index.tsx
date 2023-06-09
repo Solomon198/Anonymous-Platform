@@ -5,8 +5,15 @@ import {
 } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
-import ThemeProvider from 'theme'
-import { IconProvider } from '../../../components/Icon'
+import { createIconContext } from '../../components/Icon'
+import * as DefaultIcons from '../../components/Icon/defaultIconImport.unicorn'
+import { ThemeProvider, createTheme } from '../../components'
+import { themeDefination } from './theme'
+
+const IconContext = createIconContext({ icons: DefaultIcons })
+export const Icon = IconContext.Icon
+const IconProvider = IconContext.Provider
+const theme = createTheme(themeDefination())
 
 const AllProviders = ({
     children,
@@ -15,7 +22,7 @@ const AllProviders = ({
 }): JSX.Element => (
     <MemoryRouter>
         <IconProvider>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </IconProvider>
     </MemoryRouter>
 )

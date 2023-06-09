@@ -1,3 +1,4 @@
+import React from 'react'
 import Box from '@mui/material/Box'
 import { type SxProps } from '@mui/material'
 import MaterialTab, { type TabProps } from '@mui/material/Tab'
@@ -26,7 +27,7 @@ export interface ITab {
     children?: any
 }
 
-const Tab = (props: ITab): JSX.Element => {
+const Tab: React.FC<ITab> = (props: ITab): JSX.Element => {
     const {
         tabHeader,
         children,

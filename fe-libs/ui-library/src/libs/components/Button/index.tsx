@@ -1,9 +1,27 @@
+import React from 'react'
 import MaterialButton from '@mui/material/Button'
 import { Loader, ELoader } from '../Loader'
 import { type ButtonProps, type SxProps } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 
 const defaultLoaderSize = 10
+declare module '@mui/material/styles' {
+    interface PaletteOptions {
+        buttonSpinner: {
+            contained: string
+            outlined: string
+            text: string
+        }
+    }
+
+    interface Palette {
+        buttonSpinner: {
+            contained: string
+            outlined: string
+            text: string
+        }
+    }
+}
 
 enum LoadingPosition {
     start = 'start',
@@ -22,7 +40,7 @@ export interface IButton extends ButtonProps {
 
     'data-testid'?: string
 }
-const Button = (props: IButton): JSX.Element => {
+const Button: React.FC<IButton> = (props: IButton): JSX.Element => {
     const { palette } = useTheme()
     const {
         ref,

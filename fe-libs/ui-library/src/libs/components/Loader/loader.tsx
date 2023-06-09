@@ -1,3 +1,4 @@
+import React from 'react'
 import LinearProgress from '@mui/material/LinearProgress'
 import CircularProgress from '@mui/material/CircularProgress'
 import {
@@ -8,7 +9,7 @@ import {
     type LinearProgressProps,
 } from './types'
 
-export const Loader = ({
+export const Loader: React.FC<ILoaderCircularProps | ILoaderLinearProps> = ({
     type,
     ...props
 }: ILoaderCircularProps | ILoaderLinearProps): JSX.Element => {
