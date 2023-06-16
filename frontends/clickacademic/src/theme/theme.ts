@@ -17,6 +17,10 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       // palette values for light mode
                       primary: { main: '#000000' },
                       secondary: { main: '#9c27b0' },
+                      backgrounds: {
+                        main: "#ff2f4f", 
+                        secondary: "#f6f6f6"
+                    },
                       divider: amber[200],
                       buttonSpinner: {
                           contained: '#ffffff',

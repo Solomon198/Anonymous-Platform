@@ -9,6 +9,10 @@ import '@mui/material/styles'
 declare module '@mui/material/styles' {
     interface Theme {
         toggle: () => void
+        backgrounds: {
+            main: string
+            secondary: string
+        }
     }
     interface ThemeOptions {
         toggle?: () => void
@@ -18,7 +22,8 @@ declare module '@mui/material/styles' {
             contained: string
             outlined: string
             text: string
-        }
+        }, 
+        
     }
     interface Palette {
         buttonSpinner: {
