@@ -10,20 +10,24 @@ declare module '@mui/material/styles' {
     interface Theme {
         toggle: () => void
         backgrounds: {
-            main: string
-            secondary: string
-        }
+            webPrimary: string,
+            appPrimary: string,
+            webSecondary: string,
+            appSecondary: string,
+            inputColor: string,
+            success: string
+        }, 
     }
     interface ThemeOptions {
         toggle?: () => void
+        
     }
     interface PaletteOptions {
         buttonSpinner: {
             contained: string
             outlined: string
             text: string
-        }, 
-        
+        },
     }
     interface Palette {
         buttonSpinner: {
