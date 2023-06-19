@@ -1,4 +1,3 @@
-import newsletterImg from '../../assets/dizzy-sending-messages 1.png'
 import { Button, Input, Text } from '@dixre/ui-library'
 import { Container, Box } from '@mui/material'
 import { useTranslation } from 'react-i18next'
@@ -24,7 +23,7 @@ const Newsletter = (): JSX.Element => {
             }}
         >
             <img
-                src={newsletterImg}
+                src="./assets/images/dizzy-sending-messages 1.png"
                 alt="Newsletter Image"
                 style={{ maxWidth: '100%', marginBottom: '1rem' }}
             />
