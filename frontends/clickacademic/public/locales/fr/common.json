@@ -1,5 +1,9 @@
 {
   "homepage": {
       "title": "Tu parles alle vouz"
+  },
+  "newsletterHeading": {
+    "title": "restez à l'écoute",
+    "description": "Recevez les derniers articles et mises à jour commerciales que vous devez connaître, vous recevrez même des recommandations spéciales chaque semaine."
   }
 }

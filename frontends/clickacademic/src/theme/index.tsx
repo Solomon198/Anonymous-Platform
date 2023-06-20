@@ -14,27 +14,42 @@ declare module '@mui/material/styles' {
             appPrimary: string,
             webSecondary: string,
             appSecondary: string,
+            webMobile: string,
             inputColor: string,
             success: string
         }, 
     }
+
     interface ThemeOptions {
         toggle?: () => void
-        
     }
+
     interface PaletteOptions {
         buttonSpinner: {
             contained: string
             outlined: string
             text: string
         },
+        
+
     }
     interface Palette {
         buttonSpinner: {
             contained: string
             outlined: string
             text: string
-        }
+        },
+        backgrounds: {
+            webPrimary: React.CSSProperties['color'],
+            appPrimary: React.CSSProperties['color'],
+            webSecondary: React.CSSProperties['color'],
+            appSecondary: React.CSSProperties['color'],
+            webMobile: React.CSSProperties['color'],
+            inputColor: React.CSSProperties['color'],
+            success: React.CSSProperties['color'],
+            footerTitle: React.CSSProperties['color'],
+            footerText: React.CSSProperties['color']
+        }, 
     }
 
     interface PaletteColor {
