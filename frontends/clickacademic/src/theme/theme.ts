@@ -22,7 +22,6 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                           appPrimary: "#775ADA", // purple
                           webSecondary: '#0A1E3B', // very dark blue
                           appSecondary: "#101828", // very dark(mostly black) blue
-                          webMobile: "#ffffff",
                           inputColor: "#f9f9f9", // very light grey(mostly white)
                           success: '#2F9F1D', // green
                           footerTitle: "#98A2B3",
@@ -69,7 +68,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                   }),
         },
         typography: {
-            fontFamily: 'Poppins', // default font family
+            fontFamily: 'Roboto', // default font family
             fontSize: 14, // default font size
             fontWeightBold: 700, // default font weight for bold text
         },

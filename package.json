@@ -19,8 +19,5 @@
     "lint": "lerna run lint",
     "test": "lerna run test",
     "start:clickacademic": "lerna run start --scope=clickacademic"
-  },
-  "dependencies": {
-    "@fontsource/poppins": "^5.0.3"
   }
 }
