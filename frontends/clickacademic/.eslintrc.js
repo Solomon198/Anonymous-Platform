@@ -6,7 +6,8 @@ module.exports = {
     "extends": [
         "plugin:react/recommended",
         "standard-with-typescript",
-        "prettier"
+        "prettier",
+        "plugin:react/jsx-runtime"
     ],
     "overrides": [
     ],
@@ -14,7 +15,10 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module",
         "tsconfigRootDir": __dirname,
-        "project": ["./tsconfig.json"]
+        "project": ["./tsconfig.json"],
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "plugins": [
         "react"

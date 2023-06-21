@@ -23,7 +23,7 @@ const Newsletter = (): JSX.Element => {
             }}
         >
             <img
-                src="/assets/images/dizzy-sending-messages 1.png"
+                src="/assets/images/dizzy-sending-messages.png"
                 alt="Newsletter Image"
                 style={{ maxWidth: '100%', marginBottom: '1rem' }}
             />

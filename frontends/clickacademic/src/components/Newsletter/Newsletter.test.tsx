@@ -61,5 +61,5 @@ describe('Newsletter', () => {
     })
 })
 
-// TODO 
+// TODO
 // We need to add more tests to this work which is for integration after we add interactivity.
