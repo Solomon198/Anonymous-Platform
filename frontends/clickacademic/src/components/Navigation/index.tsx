@@ -25,7 +25,7 @@ const Navigation = (): JSX.Element => {
                     p: '1rem 3rem',
                 }}
             >
-                <Box sx={{ width: { lg: '25%', sm: '50%' }, position: "relative", right:{xs: "5rem"} }}>
+                <Box sx={{ width: { lg: '25%', sm: '50%' } }}>
                     <img
                         src="/assets/images/clickacademic_logo.jpg"
                         alt="ClickAcademic logo"

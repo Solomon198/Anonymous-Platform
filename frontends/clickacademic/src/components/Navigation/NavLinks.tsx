@@ -1,4 +1,4 @@
-import React from 'react'
+import type React from 'react'
 import Links from './Links'
 import { type SelectedPage } from './type'
 import { useTranslation } from 'react-i18next'
@@ -8,7 +8,7 @@ interface Props {
     setSelectedPage: (value: SelectedPage) => void
 }
 
-const NavLinks: React.FC<Props> = ({ selectedPage, setSelectedPage }) => {
+const NavLinks: React.FC<Props> = ({ selectedPage, setSelectedPage }):JSX.Element => {
     const { t } = useTranslation()
     const links = [
         `${t('common:navigationWidget:home')}`,

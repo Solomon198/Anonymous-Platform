@@ -13,6 +13,7 @@ declare module '@mui/material/styles' {
             webPrimary: string
             appPrimary: string
             webSecondary: string
+            webMobile: string
             appSecondary: string
             inputColor: string
             success: string

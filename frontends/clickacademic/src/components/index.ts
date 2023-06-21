@@ -1,3 +1,4 @@
-import Newsletter from './Newsletter'
+import Newsletter from './Newsletter';
+import Navigation from './Navigation';
 
-export { Newsletter }
+export { Newsletter, Navigation }
