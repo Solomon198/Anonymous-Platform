@@ -75,14 +75,17 @@ const Newsletter = (): JSX.Element => {
                                 width: 300,
                                 background: 'inherit',
                                 border: 'none',
-                                boxShadow: "none"
+                                boxShadow: 'none',
                             }}
-                            placeholder={`${t("common:newsletterWidget:placeholder")}`}
+                            type="email"
+                            placeholder={`${t(
+                                'common:newsletterWidget:placeholder'
+                            )}`}
                         />
                     </Box>
 
                     <Button
-                        text={t("common:newsletterWidget:text")}
+                        text={t('common:newsletterWidget:subscribeBtnText')}
                         variant="contained"
                         size="large"
                         sx={{

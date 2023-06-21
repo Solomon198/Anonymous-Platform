@@ -7,7 +7,7 @@
     "title": "Stay Tuned!",
     "description": "Get the latest articles and business updates that you need to know, you’ll even get special recommendations weekly.",
     "placeholder": "Your Email",
-    "text": "Subscribe"
+    "subscribeBtnText": "Subscribe"
   },
 
   "navigationWidget": {
