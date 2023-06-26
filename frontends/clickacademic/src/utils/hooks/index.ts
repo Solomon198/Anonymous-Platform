@@ -1,0 +1,1 @@
+export { useNavTranslatedValues } from './navTranslatedValues'

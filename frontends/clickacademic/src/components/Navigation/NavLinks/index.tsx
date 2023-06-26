@@ -1,33 +1,32 @@
 import type React from 'react'
 import Links from '../Link'
 import { type SelectedPage } from '../type'
-import { useTranslation } from 'react-i18next'
+import { useNavTranslatedValues } from '../../../utils/hooks'
+import { ListItemWrapper } from '../ListItemWrapper'
 
 interface Props {
     selectedPage: SelectedPage
     setSelectedPage: (value: SelectedPage) => void
+
+    isMobile?: boolean
 }
 
-const NavLinks: React.FC<Props> = ({ selectedPage, setSelectedPage }):JSX.Element => {
-    const { t } = useTranslation()
-    const links = [
-        `${t('common:navigationWidget:home')}`,
-        `${t('common:navigationWidget:features')}`,
-        `${t('common:navigationWidget:courses')}`,
-        `${t('common:navigationWidget:about')}`,
-        `${t('common:navigationWidget:support')}`,
-        `${t('common:navigationWidget:login')}`
-    ]
-    
+const NavLinks: React.FC<Props> = ({
+    selectedPage,
+    setSelectedPage,
+    isMobile,
+}): JSX.Element => {
+    const links = useNavTranslatedValues()
     return (
         <>
             {links.map((link, index) => (
-                <Links
-                    key={index}
-                    page={link}
-                    selectedPage={selectedPage}
-                    setSelectedPage={setSelectedPage}
-                />
+                <ListItemWrapper isMobile={isMobile} key={index}>
+                    <Links
+                        page={link}
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                    />
+                </ListItemWrapper>
             ))}
         </>
     )

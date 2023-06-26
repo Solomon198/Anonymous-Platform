@@ -1,18 +1,12 @@
-import type React from 'react';
+import type React from 'react'
 import { useState } from 'react'
-import {
-    Drawer,
-    IconButton,
-    List,
-    ListItemButton,
-    ListItemIcon,
-} from '@mui/material'
-import { useTranslation } from 'react-i18next'
+import { Drawer, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import Links from '../Link'
 import { type SelectedPage } from '../type'
 import { Button, Text } from '@dixre/ui-library'
+import { useTranslation } from 'react-i18next'
+import NavLinks from '../NavLinks'
 
 interface Props {
     selectedPage: SelectedPage
@@ -22,14 +16,7 @@ interface Props {
 const MobileNav: React.FC<Props> = ({ selectedPage, setSelectedPage }) => {
     const [openDrawer, setOpenDrawer] = useState<boolean>(false)
     const { t } = useTranslation()
-    const links = [
-        `${t('common:navigationWidget:home')}`,
-        `${t('common:navigationWidget:features')}`,
-        `${t('common:navigationWidget:courses')}`,
-        `${t('common:navigationWidget:about')}`,
-        `${t('common:navigationWidget:support')}`,
-        `${t('common:navigationWidget:login')}`,
-    ]
+
     return (
         <>
             <Drawer
@@ -55,23 +42,13 @@ const MobileNav: React.FC<Props> = ({ selectedPage, setSelectedPage }) => {
                 >
                     <CloseIcon />
                 </Text>
-                {links.map(
-                    (link: string, index: React.Key | null | undefined) => (
-                        <>
-                            <List key={index} style={{}}>
-                                <ListItemButton>
-                                    <ListItemIcon>
-                                        <Links
-                                            page={link}
-                                            selectedPage={selectedPage}
-                                            setSelectedPage={setSelectedPage}
-                                        />
-                                    </ListItemIcon>
-                                </ListItemButton>
-                            </List>
-                        </>
-                    )
-                )}
+                {
+                    <NavLinks
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                        isMobile={true}
+                    />
+                }
                 <Button
                     text={t('common:navigationWidget:signup')}
                     variant="contained"
