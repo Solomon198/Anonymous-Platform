@@ -21,7 +21,7 @@ const Navigation = (): JSX.Element => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    p: '1rem 3rem'
+                    p: '1rem 3rem',
                 }}
             >
                 <Box sx={{ width: { lg: '25%', sm: '50%' } }}>
@@ -34,10 +34,10 @@ const Navigation = (): JSX.Element => {
                 {!isMobile ? (
                     <DesktopNav />
                 ) : (
-                        <MobileNav
-                            selectedPage={selectedPage}
-                            setSelectedPage={setSelectedPage}
-                        />
+                    <MobileNav
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                    />
                 )}
             </Card>
         </Container>
