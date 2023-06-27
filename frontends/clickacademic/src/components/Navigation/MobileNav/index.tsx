@@ -10,7 +10,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import Links from '../Link/Link'
+import Links from '../Link'
 import { type SelectedPage } from '../type'
 import { Button, Text } from '@dixre/ui-library'
 

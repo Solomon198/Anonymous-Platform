@@ -1,5 +1,5 @@
 import type React from 'react'
-import Links from '../Link/Link'
+import Links from '../Link'
 import { type SelectedPage } from '../type'
 import { useTranslation } from 'react-i18next'
 
