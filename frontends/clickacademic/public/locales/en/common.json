@@ -18,5 +18,13 @@
     "support": "Support",
     "login": "Login",
     "signup": "Sign Up"
+  },
+
+  "courseType": {
+    "all":"All",
+    "files":"Files",
+    "videos":"Videos",
+    "freeCourses":"Free Courses",
+    "premiumCourses":"Premium Courses"
   }
 }

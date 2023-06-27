@@ -1,6 +1,6 @@
 import type React from 'react'
-import Links from './Links'
-import { type SelectedPage } from './type'
+import Links from '../Link/Link'
+import { type SelectedPage } from '../type'
 import { useTranslation } from 'react-i18next'
 
 interface Props {

@@ -1,4 +1,4 @@
-import { type SelectedPage } from './type'
+import { type SelectedPage } from '../type'
 import { Link } from 'react-router-dom'
 import { Text } from '@dixre/ui-library'
 

@@ -70,7 +70,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
         typography: {
             fontFamily: 'Poppins', // default font family
             fontSize: 14, // default font size
-            fontWeightBold: 700, // default font weight for bold text
+            fontWeightBold: 500, // default font weight for bold text
         },
     }
 }

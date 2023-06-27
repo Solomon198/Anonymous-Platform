@@ -10,8 +10,8 @@ import {
 import { useTranslation } from 'react-i18next'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import Links from './Links'
-import { type SelectedPage } from './type'
+import Links from '../Link/Link'
+import { type SelectedPage } from '../type'
 import { Button, Text } from '@dixre/ui-library'
 
 interface Props {
@@ -83,6 +83,7 @@ const MobileNav: React.FC<Props> = ({ selectedPage, setSelectedPage }) => {
                     }}
                 />
             </Drawer>
+
             <IconButton
                 onClick={() => {
                     setOpenDrawer(!openDrawer)
