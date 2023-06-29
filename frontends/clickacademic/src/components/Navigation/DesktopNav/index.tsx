@@ -2,15 +2,13 @@ import { Box } from '@mui/material'
 import NavLinks from '../NavLinks'
 import { Button } from '@dixre/ui-library'
 import { useState } from 'react'
-import { SelectedPage } from '../type'
 import { useTranslation } from 'react-i18next'
 
 const DesktopNav = (): JSX.Element => {
-    const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-        SelectedPage.Home
+    const { t } = useTranslation()
+    const [selectedPage, setSelectedPage] = useState<string>(`${t('common:navigationWidget:signup')}`
     )
 
-    const { t } = useTranslation()
 
     return (
         <Box

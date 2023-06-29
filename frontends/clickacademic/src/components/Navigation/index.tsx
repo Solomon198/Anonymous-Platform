@@ -1,19 +1,22 @@
 /* eslint-disable react/prop-types */
 import { Card, useTheme } from '@dixre/ui-library'
 import { Box, Container, useMediaQuery } from '@mui/material'
-import { SelectedPage } from './type'
 import { useState } from 'react'
 import MobileNav from './MobileNav'
 import DesktopNav from './DesktopNav'
+import { useTranslation } from 'react-i18next'
+import { Outlet } from 'react-router-dom'
 
 const Navigation = (): JSX.Element => {
-    const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-        SelectedPage.Home
+    const { t } = useTranslation()
+    const [selectedPage, setSelectedPage] = useState<string>(
+        `${t('common:navigationWidget:signup')}`
     )
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
+        <>
         <Container maxWidth={false} style={{ margin: 0 }} disableGutters>
             <Card
                 elevation={2}
@@ -41,6 +44,8 @@ const Navigation = (): JSX.Element => {
                 )}
             </Card>
         </Container>
+        <Outlet />
+        </>
     )
 }
 

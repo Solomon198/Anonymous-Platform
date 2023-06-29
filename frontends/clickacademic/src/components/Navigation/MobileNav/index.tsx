@@ -3,14 +3,13 @@ import { useState } from 'react'
 import { Drawer, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import { type SelectedPage } from '../type'
 import { Button, Text } from '@dixre/ui-library'
 import { useTranslation } from 'react-i18next'
 import NavLinks from '../NavLinks'
 
 interface Props {
-    selectedPage: SelectedPage
-    setSelectedPage: (value: SelectedPage) => void
+    selectedPage: string
+    setSelectedPage: (value: string) => void
 }
 
 const MobileNav: React.FC<Props> = ({ selectedPage, setSelectedPage }) => {

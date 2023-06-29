@@ -1,11 +1,10 @@
-import { type SelectedPage } from '../type'
 import { Link } from 'react-router-dom'
 import { Text } from '@dixre/ui-library'
 
 interface Props {
     page: string
-    selectedPage: SelectedPage
-    setSelectedPage: (value: SelectedPage) => void
+    selectedPage: string
+    setSelectedPage: (value: string) => void
 }
 
 const Links: React.FC<Props> = ({
@@ -13,7 +12,7 @@ const Links: React.FC<Props> = ({
     selectedPage,
     setSelectedPage,
 }: Props) => {
-    const lowerCase = page.toLowerCase().replace(/ /g, '') as SelectedPage
+    const lowerCase = page.toLowerCase().replace(/ /g, '')
     return (
         <Link
             style={{

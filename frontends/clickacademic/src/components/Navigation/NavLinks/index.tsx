@@ -1,12 +1,11 @@
 import type React from 'react'
 import Links from '../Link'
-import { type SelectedPage } from '../type'
 import { useNavTranslatedValues } from '../../../utils/hooks'
 import { ListItemWrapper } from '../ListItemWrapper'
 
 interface Props {
-    selectedPage: SelectedPage
-    setSelectedPage: (value: SelectedPage) => void
+    selectedPage: string
+    setSelectedPage: (value: string) => void
 
     isMobile?: boolean
 }
