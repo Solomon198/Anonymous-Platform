@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link as NavigationLink } from 'react-router-dom'
 import { Text } from '@dixre/ui-library'
 
 interface Props {
@@ -7,14 +7,14 @@ interface Props {
     setSelectedPage: (value: string) => void
 }
 
-const Links: React.FC<Props> = ({
+const Link: React.FC<Props> = ({
     page,
     selectedPage,
     setSelectedPage,
 }: Props) => {
     const lowerCase = page.toLowerCase().replace(/ /g, '')
     return (
-        <Link
+        <NavigationLink
             style={{
                 textDecoration: 'none',
                 color: 'backgrounds.webSecondary',
@@ -28,14 +28,20 @@ const Links: React.FC<Props> = ({
             <Text
                 color={{
                     lg: 'backgrounds.webSecondary',
+                    md: 'backgrounds.webSecondary',
+                    sm: 'backgrounds.webMobile',
                     xs: 'backgrounds.webMobile',
                 }}
                 fontWeight="fontWeightBold"
+                fontSize={{
+                    lg: '18px',
+                    md: '15px',
+                }}
             >
                 {page}
             </Text>
-        </Link>
+        </NavigationLink>
     )
 }
 
-export default Links
+export default Link

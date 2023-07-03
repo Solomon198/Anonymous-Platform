@@ -6,9 +6,9 @@ import { useTranslation } from 'react-i18next'
 
 const DesktopNav = (): JSX.Element => {
     const { t } = useTranslation()
-    const [selectedPage, setSelectedPage] = useState<string>(`${t('common:navigationWidget:signup')}`
+    const [selectedPage, setSelectedPage] = useState<string>(
+        `${t('common:navigationWidget:home')}`
     )
-
 
     return (
         <Box
@@ -16,7 +16,7 @@ const DesktopNav = (): JSX.Element => {
                 display: 'flex',
                 alignContent: 'center',
                 alignItems: 'center',
-                gap: '2.5rem',
+                gap: { lg: '3rem', md: '2rem' },
             }}
         >
             <NavLinks
@@ -30,6 +30,7 @@ const DesktopNav = (): JSX.Element => {
                     borderRadius: '20px',
                     backgroundColor: 'backgrounds.webPrimary',
                     fontWeight: 'fontWeightBold',
+                    fontSize: { lg: '18px', md: '15px' },
                     width: 150,
                 }}
                 size="large"

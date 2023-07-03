@@ -1,5 +1,5 @@
 import type React from 'react'
-import Links from '../Link'
+import Link from '../Link'
 import { useNavTranslatedValues } from '../../../utils/hooks'
 import { ListItemWrapper } from '../ListItemWrapper'
 
@@ -20,7 +20,7 @@ const NavLinks: React.FC<Props> = ({
         <>
             {links.map((link, index) => (
                 <ListItemWrapper isMobile={isMobile} key={index}>
-                    <Links
+                    <Link
                         page={link}
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}

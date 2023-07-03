@@ -10,41 +10,56 @@ import { Outlet } from 'react-router-dom'
 const Navigation = (): JSX.Element => {
     const { t } = useTranslation()
     const [selectedPage, setSelectedPage] = useState<string>(
-        `${t('common:navigationWidget:signup')}`
+        `${t('common:navigationWidget:home')}`
     )
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('md'))
 
     return (
         <>
-        <Container maxWidth={false} style={{ margin: 0 }} disableGutters>
-            <Card
-                elevation={2}
-                sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    p: '1rem 3rem',
-                }}
-            >
-                <Box sx={{ width: { lg: '25%', sm: '50%' } }}>
-                    <img
-                        src="/assets/images/clickacademic_logo.jpg"
-                        alt="ClickAcademic logo"
-                        width="50%"
-                    />
-                </Box>
-                {!isMobile ? (
-                    <DesktopNav />
-                ) : (
-                    <MobileNav
-                        selectedPage={selectedPage}
-                        setSelectedPage={setSelectedPage}
-                    />
-                )}
-            </Card>
-        </Container>
-        <Outlet />
+            <Container maxWidth={false} style={{ margin: 0 }} disableGutters>
+                <Card
+                    elevation={2}
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: '4rem',
+                        p: {
+                            lg: '.5rem 3.5rem',
+                            md: '.5rem 2rem',
+                            sm: '.5rem 3.5rem',
+                            xs: '.5rem 3.5rem',
+                        },
+                    }}
+                >
+                    <Box
+                        sx={{
+                            width: {
+                                lg: '15%',
+                                md: '20%',
+                                sm: '30%',
+                                xs: '30%',
+                            },
+                        }}
+                    >
+                        <img
+                            src="/assets/images/clickacademic_logo.jpg"
+                            alt="ClickAcademic logo"
+                            width="100%"
+                        />
+                    </Box>
+                    {!isMobile ? (
+                        <DesktopNav />
+                    ) : (
+                        <MobileNav
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
+                    )}
+                </Card>
+            </Container>
+            <Outlet />
         </>
     )
 }
