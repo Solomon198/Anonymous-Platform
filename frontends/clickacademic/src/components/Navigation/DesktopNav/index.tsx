@@ -31,7 +31,10 @@ const DesktopNav = (): JSX.Element => {
                     backgroundColor: 'backgrounds.webPrimary',
                     fontWeight: 'fontWeightBold',
                     fontSize: { lg: '18px', md: '15px' },
-                    width: 150,
+                    width: {
+                        lg: 200,
+                        md: 150
+                    },
                 }}
                 size="large"
             />

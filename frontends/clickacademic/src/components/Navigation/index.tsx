@@ -23,7 +23,7 @@ const Navigation = (): JSX.Element => {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-between',
+                        justifyContent: 'space-around',
                         gap: '4rem',
                         p: {
                             lg: '.5rem 3.5rem',
