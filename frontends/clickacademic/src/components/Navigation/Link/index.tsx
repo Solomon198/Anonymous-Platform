@@ -1,7 +1,7 @@
 import { Link as NavigationLink } from 'react-router-dom'
-import { Text } from '@dixre/ui-library'
+import { Text, useTheme } from '@dixre/ui-library'
 
-interface Props {
+export interface Props {
     page: string
     selectedPage: string
     setSelectedPage: (value: string) => void
@@ -12,7 +12,9 @@ const Link: React.FC<Props> = ({
     selectedPage,
     setSelectedPage,
 }: Props) => {
+    const { palette } = useTheme()
     const lowerCase = page.toLowerCase().replace(/ /g, '')
+    const active = page.toLowerCase() === selectedPage.toLowerCase()
     return (
         <NavigationLink
             style={{
@@ -32,6 +34,7 @@ const Link: React.FC<Props> = ({
                     sm: 'backgrounds.webMobile',
                     xs: 'backgrounds.webMobile',
                 }}
+                style={{ color: active ? palette.error.main : '' }}
                 fontWeight="fontWeightBold"
                 fontSize={{
                     lg: '18px',

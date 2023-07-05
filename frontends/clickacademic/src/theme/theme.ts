@@ -17,6 +17,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       // palette values for light mode
                       primary: { main: '#000000' },
                       secondary: { main: '#9c27b0' },
+                      error: { main: '#f44336' },
                       backgrounds: {
                           webPrimary: '#ff2f4f', // pink
                           appPrimary: '#775ADA', // purple
@@ -43,6 +44,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       // palette values for dark mode
                       primary: { main: '#ffffff' },
                       secondary: { main: '#9c27b0' },
+                      error: { main: '#f44336' },
                       backgrounds: {
                           webPrimary: '#ff2f4f',
                           appPrimary: '#5f48ae',

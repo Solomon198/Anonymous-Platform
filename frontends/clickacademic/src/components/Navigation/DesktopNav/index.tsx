@@ -1,14 +1,19 @@
 import { Box } from '@mui/material'
 import NavLinks from '../NavLinks'
 import { Button } from '@dixre/ui-library'
-import { useState } from 'react'
+import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const DesktopNav = (): JSX.Element => {
+export interface Props {
+    selectedPage: string
+    setSelectedPage: (value: string) => void
+}
+
+const DesktopNav: FC<Props> = ({
+    selectedPage,
+    setSelectedPage,
+}): JSX.Element => {
     const { t } = useTranslation()
-    const [selectedPage, setSelectedPage] = useState<string>(
-        `${t('common:navigationWidget:home')}`
-    )
 
     return (
         <Box
@@ -16,7 +21,8 @@ const DesktopNav = (): JSX.Element => {
                 display: 'flex',
                 alignContent: 'center',
                 alignItems: 'center',
-                gap: { lg: '3rem', md: '2rem' },
+                justifyContent: 'space-evenly',
+                flexGrow: 1,
             }}
         >
             <NavLinks
@@ -27,13 +33,13 @@ const DesktopNav = (): JSX.Element => {
                 text={t('common:navigationWidget:signup')}
                 variant="contained"
                 sx={{
-                    borderRadius: '20px',
+                    borderRadius: 50,
                     backgroundColor: 'backgrounds.webPrimary',
                     fontWeight: 'fontWeightBold',
                     fontSize: { lg: '18px', md: '15px' },
                     width: {
                         lg: 200,
-                        md: 150
+                        md: 150,
                     },
                 }}
                 size="large"

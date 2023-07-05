@@ -1,5 +1,8 @@
 import { type RenderResult, customRender, fireEvent } from '../../utils/test'
 import Newsletter from '.'
+// NOTE
+// We don't have actual translations so we use translation keys since t will
+// return the translation key when it can't find translation
 
 const translationKeys = {
     newsLetterWidgetTitle: 'common:newsletterWidget:title',

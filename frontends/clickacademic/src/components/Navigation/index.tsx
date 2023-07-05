@@ -23,13 +23,13 @@ const Navigation = (): JSX.Element => {
                     sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-around',
+                        justifyContent: 'space-between',
                         gap: '4rem',
                         p: {
                             lg: '.5rem 3.5rem',
                             md: '.5rem 2rem',
-                            sm: '.5rem 3.5rem',
-                            xs: '.5rem 3.5rem',
+                            sm: '.5rem 1.5rem',
+                            xs: '.5rem 1.5rem',
                         },
                     }}
                 >
@@ -50,7 +50,10 @@ const Navigation = (): JSX.Element => {
                         />
                     </Box>
                     {!isMobile ? (
-                        <DesktopNav />
+                        <DesktopNav
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                        />
                     ) : (
                         <MobileNav
                             selectedPage={selectedPage}

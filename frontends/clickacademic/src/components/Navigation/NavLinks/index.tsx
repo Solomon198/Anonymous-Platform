@@ -3,7 +3,7 @@ import Link from '../Link'
 import { useNavTranslatedValues } from '../../../utils/hooks'
 import { ListItemWrapper } from '../ListItemWrapper'
 
-interface Props {
+export interface Props {
     selectedPage: string
     setSelectedPage: (value: string) => void
 

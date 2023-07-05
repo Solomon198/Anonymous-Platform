@@ -7,7 +7,7 @@ import { Button, Text } from '@dixre/ui-library'
 import { useTranslation } from 'react-i18next'
 import NavLinks from '../NavLinks'
 
-interface Props {
+export interface Props {
     selectedPage: string
     setSelectedPage: (value: string) => void
 }
