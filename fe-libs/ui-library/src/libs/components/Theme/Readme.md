@@ -41,7 +41,7 @@ export default ThemeProvider
 
 ```js
 
-// you can extend or overide type definitions like this, but in our case it will be from @dixre/ui-library which is the target
+// you can extend or overide type definitions like this, but in our case it will be from @solex/ui-library which is the target
  declare module '@mui/material/styles' {
     interface Theme {
         toggle: () => void

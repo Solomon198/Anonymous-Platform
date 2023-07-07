@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {
     createTheme,
     ThemeProvider as ThemeComponentProvider,
-} from '@dixre/ui-library'
+} from '@solex/ui-library'
 import { themeDefination, ThemeType, type Modes } from './theme'
 import '@mui/material/styles'
 

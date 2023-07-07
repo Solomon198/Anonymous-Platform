@@ -1,4 +1,4 @@
-import { Button, Input, Text } from '@dixre/ui-library'
+import { Button, Input, Text } from '@solex/ui-library'
 import { Container, Box } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 

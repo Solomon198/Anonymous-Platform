@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Drawer, IconButton } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
-import { Button, Text } from '@dixre/ui-library'
+import { Button, Text } from '@solex/ui-library'
 import { useTranslation } from 'react-i18next'
 import NavLinks from '../NavLinks'
 

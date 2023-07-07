@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Card, useTheme } from '@dixre/ui-library'
+import { Card, useTheme } from '@solex/ui-library'
 import { Box, Container, useMediaQuery } from '@mui/material'
 import { useState } from 'react'
 import MobileNav from './MobileNav'

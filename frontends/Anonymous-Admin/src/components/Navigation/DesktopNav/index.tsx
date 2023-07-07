@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import NavLinks from '../NavLinks'
-import { Button } from '@dixre/ui-library'
+import { Button } from '@solex/ui-library'
 import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 

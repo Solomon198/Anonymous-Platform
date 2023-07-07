@@ -1,4 +1,4 @@
-import { type ThemeOptions } from '@dixre/ui-library'
+import { type ThemeOptions } from '@solex/ui-library'
 import { amber, grey, deepOrange } from '@mui/material/colors'
 
 export enum ThemeType {

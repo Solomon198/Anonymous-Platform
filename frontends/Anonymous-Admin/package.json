@@ -1,5 +1,5 @@
 {
-  "name": "clickacademic",
+  "name": "anonymous-admin",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -17,7 +17,7 @@
     "rimraf": "^4.4.1"
   },
   "dependencies": {
-    "@dixre/ui-library": "file:../../fe-libs/ui-library",
+    "@solex/ui-library": "file:../../fe-libs/ui-library",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^4.5.8",

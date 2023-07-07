@@ -1,4 +1,4 @@
-## @dixre/ui-library
+## @solex/ui-library
 
 This is the ui-library that allows us to build reusable react components that we can share throughout the monorepo.
 

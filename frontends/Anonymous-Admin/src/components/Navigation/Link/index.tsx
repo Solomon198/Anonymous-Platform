@@ -1,5 +1,5 @@
 import { Link as NavigationLink } from 'react-router-dom'
-import { Text, useTheme } from '@dixre/ui-library'
+import { Text, useTheme } from '@solex/ui-library'
 
 export interface Props {
     page: string

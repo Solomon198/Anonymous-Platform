@@ -1,5 +1,5 @@
 {
-  "name": "clickacademic",
+  "name": "user-service",
   "type": "module",
   "main": "dist/app.js",
   "types": "dist/app.d.ts",
