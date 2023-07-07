@@ -25,9 +25,7 @@ describe('NavigationDesktop', () => {
 
     test('Should ensure logo is displayed', () => {
         const { getByRole } = getComponent()
-        expect(
-            getByRole('img', { name: 'anonymous logo' })
-        ).toBeInTheDocument()
+        expect(getByRole('img', { name: 'anonymous logo' })).toBeInTheDocument()
     })
 
     test('Should ensure all links are rendered', () => {
@@ -62,9 +60,7 @@ describe('NavigationMobile', () => {
 
     test('Should ensure logo is displayed on mobile', () => {
         const { getByRole } = getComponent()
-        expect(
-            getByRole('img', { name: 'anonymous logo' })
-        ).toBeInTheDocument()
+        expect(getByRole('img', { name: 'anonymous logo' })).toBeInTheDocument()
     })
 
     test('Should ensure signup button is displayed on mobile', () => {
