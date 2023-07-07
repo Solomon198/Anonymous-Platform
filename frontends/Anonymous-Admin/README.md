@@ -1,6 +1,6 @@
-# Clickacademic
+# anonymous
 
-This is the main project frontend for clickacademic. though right now this project is part of the `npm` workspace it might be removed when the ui-libraries are removed.
+This is the main project frontend for anonymous. though right now this project is part of the `npm` workspace it might be removed when the ui-libraries are removed.
 
 ## Running project
 

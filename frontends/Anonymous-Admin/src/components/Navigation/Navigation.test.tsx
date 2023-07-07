@@ -26,7 +26,7 @@ describe('NavigationDesktop', () => {
     test('Should ensure logo is displayed', () => {
         const { getByRole } = getComponent()
         expect(
-            getByRole('img', { name: 'ClickAcademic logo' })
+            getByRole('img', { name: 'anonymous logo' })
         ).toBeInTheDocument()
     })
 
@@ -63,7 +63,7 @@ describe('NavigationMobile', () => {
     test('Should ensure logo is displayed on mobile', () => {
         const { getByRole } = getComponent()
         expect(
-            getByRole('img', { name: 'ClickAcademic logo' })
+            getByRole('img', { name: 'anonymous logo' })
         ).toBeInTheDocument()
     })
 

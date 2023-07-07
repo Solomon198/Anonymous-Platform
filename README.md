@@ -52,11 +52,11 @@ npm run clean:node_modules
  npm run test
 ```
 
-## Runing Click Academic
+## Runing Anonymous
 
 - To run the project you have run the following in the monorepo root directory. Incase you don't want to run project from the monorepo root directory, you can build the libraries and then navigate to the project you want and start it.
 
 ```bash
 npm run build:libs # build libraries in the monorepo
-npm run start:clickacademic
+npm run start:anonymous
 ```

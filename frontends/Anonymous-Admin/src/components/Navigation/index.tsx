@@ -44,8 +44,8 @@ const Navigation = (): JSX.Element => {
                         }}
                     >
                         <img
-                            src="/assets/images/clickacademic_logo.jpg"
-                            alt="ClickAcademic logo"
+                            src="/assets/images/anonymous_logo.jpg"
+                            alt="anonymous logo"
                             width="100%"
                         />
                     </Box>
