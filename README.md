@@ -6,15 +6,14 @@ To start using the monorepo the following instruction will help you kickstart us
 
 - Assuming you have not `cloned` this repo before, you can run the following on the directory you want to manage project.
 
-```bash
-  git clone https://github.com/dixre-products/Products.git
-```
+````bash
+  git clone https://github.com/Solomon198/Anonymous-Platform.git
 
 - To install all dependecies in all workspaces run the following command. make sure you run this command to ensure that all dependencies are synced.
 
 ```bash
   npm ci
-```
+````
 
 #### 3. Setting up pre-push and pre-commit hooks
 
