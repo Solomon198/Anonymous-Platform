@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -24,6 +24,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import {useTranslation} from 'react-i18next';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -57,7 +59,7 @@ function Section({children, title}: SectionProps): JSX.Element {
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const {t} = useTranslation();
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -68,6 +70,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+      <Text>{t('key')}</Text>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
