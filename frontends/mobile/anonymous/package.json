@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug && npm start",
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
@@ -14,7 +14,8 @@
     "intl-pluralrules": "^2.0.1",
     "react": "18.2.0",
     "react-i18next": "^13.0.2",
-    "react-native": "0.72.3"
+    "react-native": "0.72.3",
+    "react-native-navigation": "^7.33.3-hotfix.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
