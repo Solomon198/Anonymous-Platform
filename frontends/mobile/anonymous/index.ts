@@ -3,24 +3,16 @@
  */
 
 import {Navigation} from 'react-native-navigation';
-import App from './App';
+import {
+  IntializeApplicationScreens,
+  DefaultNavSettingStack,
+  SetUpDefaultNavSettings,
+} from './src/navigation';
 import 'intl-pluralrules';
 import './i18next';
 
-Navigation.registerComponent('com.myApp.WelcomeScreen', () => App);
-
+SetUpDefaultNavSettings();
+IntializeApplicationScreens();
 Navigation.events().registerAppLaunchedListener(() => {
-  Navigation.setRoot({
-    root: {
-      stack: {
-        children: [
-          {
-            component: {
-              name: 'com.myApp.WelcomeScreen',
-            },
-          },
-        ],
-      },
-    },
-  });
+  DefaultNavSettingStack();
 });
