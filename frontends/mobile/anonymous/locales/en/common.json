@@ -9,8 +9,15 @@
         "facebook-sign-in": "Sign in with Google",
         "no-account": "Don't have an account ? "
     },
+    "signup":{
+        "google-sign-up": "Sign up with Google",
+        "twitter-sign-up": "Sign up with Google",
+        "facebook-sign-up": "Sign up with Google",
+        "have-account": "Already have an account ? "
+    },
     "create-account": "Create Account",
     "register":"Register",
-    "signin": "Sign in"
+    "signin": "Sign in",
+    "signup-account": "Sign up"
 
 }
