@@ -6,7 +6,7 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
-import {Text, Container, Heading} from 'native-base';
+import {Text, Heading} from 'native-base';
 import createStyles from './style.css';
 import {useTheme} from '../../theme';
 import {useTranslation} from 'react-i18next';
@@ -35,13 +35,15 @@ export default function InitScreen() {
 
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <StatusBar backgroundColor={theme.backgrounds.appPrimary} />
-      <Image
-        // @ts-ignore
-        style={styles.img}
-        source={require('../../../assets/media/images/hanwok.png')}
-      />
-      <Container style={styles.contentContainer}>
+      <StatusBar backgroundColor={theme.primary.main} />
+      <View style={styles.imgContainer}>
+        <Image
+          // @ts-ignore
+          style={styles.img}
+          source={require('../../../assets/media/images/image3.jpeg')}
+        />
+      </View>
+      <View style={styles.contentContainer}>
         <Heading size="lg" style={styles.appTitle}>
           {t('common:intro-screen:text-1')}
         </Heading>
@@ -57,7 +59,7 @@ export default function InitScreen() {
             <Text style={styles.btnText}>{t('common:signin')}</Text>
           </TouchableOpacity>
         </View>
-      </Container>
+      </View>
     </SafeAreaView>
   );
 }
