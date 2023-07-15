@@ -6,13 +6,16 @@ import {NativeBaseProvider} from 'native-base';
 import getStore from '../redux/store';
 import {Screens} from './screens';
 import IntroScreen from '../screens/Intro';
+import {ThemeProvider} from '../theme';
 
 export const {persistor, store} = getStore();
 
 const EnhancedComponent = ({children}: any) => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <NativeBaseProvider>{children}</NativeBaseProvider>
+      <ThemeProvider>
+        <NativeBaseProvider>{children}</NativeBaseProvider>
+      </ThemeProvider>
     </PersistGate>
   </Provider>
 );

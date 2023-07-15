@@ -1,18 +1,8 @@
 import {combineReducers} from 'redux';
-
-import {createSlice} from '@reduxjs/toolkit';
-
-// subject to removal pending when a real reducer is available
-const defaultReducer = createSlice({
-  name: 'default',
-  initialState: {default: ''},
-  reducers: {
-    getAll: _ => {},
-  },
-});
+import ThemeReducer from '../theme/reducer';
 
 const combinedReducers = combineReducers({
-  fake: defaultReducer.reducer,
+  theme: ThemeReducer,
 });
 
 export default combinedReducers;

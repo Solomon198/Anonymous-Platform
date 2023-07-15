@@ -1,3 +1,9 @@
 {
-    "key": "hello world"
+    "intro-screen":{
+        "text-1": "Discover Your Dream Job Here",
+        "text-2": "Discover all the exiting roles. Based on your interest and major."
+    },
+    "register":"Register",
+    "signin": "Sign in"
+
 }
