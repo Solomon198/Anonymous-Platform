@@ -3,6 +3,13 @@
         "text-1": "Protect Your Personality & Get Help",
         "text-2": "Got challenges and worry about your peronality ?. Anonymous got you!"
     },
+    "login":{
+        "google-sign-in": "Sign in with Google",
+        "twitter-sign-in": "Sign in with Google",
+        "facebook-sign-in": "Sign in with Google",
+        "no-account": "Don't have an account ? "
+    },
+    "create-account": "Create Account",
     "register":"Register",
     "signin": "Sign in"
 

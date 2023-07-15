@@ -8,8 +8,8 @@ export function DefaultNavSettingStack() {
         children: [
           {
             component: {
-              name: Screens.INTRO_SCREEN,
-              id: Screens.INTRO_SCREEN,
+              name: Screens.LOGIN_SCREENS,
+              id: Screens.LOGIN_SCREENS,
             },
           },
         ],
