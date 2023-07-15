@@ -15,6 +15,7 @@ const ScreenStyles = (theme: TTheme) => {
       fontWeight: 'bold',
       color: text.primary,
       fontSize: 25,
+      width: 300,
     },
     aboutApp: {
       color: text.primary,
@@ -22,15 +23,19 @@ const ScreenStyles = (theme: TTheme) => {
       textAlign: 'center',
       marginVertical: 15,
     },
-
+    imgContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
     img: {
-      borderRadius: 25,
-      flex: 5,
+      borderRadius: 200,
       // @ts-ignore
-      width: null,
+      width: 300,
+      height: 300,
     },
     contentContainer: {
-      flex: 4,
+      flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
       alignContent: 'center',
@@ -40,7 +45,7 @@ const ScreenStyles = (theme: TTheme) => {
     btnGroup: {flexDirection: 'row', marginTop: 25},
     btnLeft: {
       flexGrow: 1,
-      backgroundColor: '#ffffff',
+      backgroundColor: backgrounds.appSecondary,
       paddingVertical: 20,
       borderRadius: 17,
       marginRight: -15,
@@ -48,7 +53,7 @@ const ScreenStyles = (theme: TTheme) => {
     btnRight: {
       flexGrow: 1,
       paddingVertical: 20,
-      borderColor: '#fff',
+      borderColor: backgrounds.appSecondary,
       borderWidth: 1,
       borderTopRightRadius: 20,
       borderBottomRightRadius: 20,
@@ -56,7 +61,7 @@ const ScreenStyles = (theme: TTheme) => {
     btnText: {
       textAlign: 'center',
       fontWeight: '900',
-      color: '#666',
+      color: text.secondary,
     },
   });
 
