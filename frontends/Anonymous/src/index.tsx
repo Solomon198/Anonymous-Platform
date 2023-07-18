@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import ThemeProvider from './theme/index'
-import { Navigation } from './components'
+import Login from './pages/login'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './i18n'
 import '@fontsource/roboto/300.css'
@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Navigation />,
+        element: <Login />,
         children: [
             {
                 path: '/home',

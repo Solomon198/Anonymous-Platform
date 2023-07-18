@@ -19,7 +19,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       secondary: { main: '#9c27b0' },
                       error: { main: '#f44336' },
                       backgrounds: {
-                          webPrimary: '#ff2f4f', // pink
+                          webPrimary: '#ffc100', // pink
                           appPrimary: '#775ADA', // purple
                           webSecondary: '#0A1E3B', // very dark blue
                           appSecondary: '#101828', // very dark(mostly black) blue
@@ -46,7 +46,7 @@ export const themeDefination = (mode: Modes): ThemeOptions => {
                       secondary: { main: '#9c27b0' },
                       error: { main: '#f44336' },
                       backgrounds: {
-                          webPrimary: '#ff2f4f',
+                          webPrimary: '#ffc100',
                           appPrimary: '#5f48ae',
                           inputColor: '#f9f9f9',
                           success: '#2F9F1D',
