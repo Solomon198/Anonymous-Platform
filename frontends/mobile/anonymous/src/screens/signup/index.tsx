@@ -13,12 +13,23 @@ import createStyle from './style.css';
 // @ts-ignore
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useTranslation} from 'react-i18next';
+import {Navigation} from 'react-native-navigation';
+import {Screens} from '../../navigation';
 
-const Signup = () => {
+type Props = {
+  componentId: string;
+};
+const Signup = (props: Props) => {
   const {t} = useTranslation();
   const theme = useTheme();
   const {styles} = createStyle(theme);
-
+  const login = () => {
+    Navigation.push(props.componentId, {
+      component: {
+        name: Screens.LOGIN_SCREEN,
+      },
+    });
+  };
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar backgroundColor={theme.primary.main} />
@@ -63,7 +74,7 @@ const Signup = () => {
       <View style={styles.textContainer}>
         <Text style={styles.createAccountText}>
           {t('common:signup:have-account')}
-          <TouchableNativeFeedback>
+          <TouchableNativeFeedback onPress={login}>
             <Text style={styles.createAccountSubText}>
               {t('common:signin')}
             </Text>

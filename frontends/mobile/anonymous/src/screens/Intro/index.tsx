@@ -10,24 +10,26 @@ import {Text, Heading} from 'native-base';
 import createStyles from './style.css';
 import {useTheme} from '../../theme';
 import {useTranslation} from 'react-i18next';
-
-export default function InitScreen() {
+import {Navigation} from 'react-native-navigation';
+import {Screens} from '../../navigation';
+type Props = {
+  componentId: string;
+};
+export default function InitScreen(props: Props) {
   const createAccount = () => {
-    // Navigation.push(this.props.componentId, {
-    //   component: {
-    //     id: NavigationScreens.SIGNUP_SCREEN,
-    //     name: NavigationScreens.SIGNUP_SCREEN,
-    //   },
-    // });
+    Navigation.push(props.componentId, {
+      component: {
+        name: Screens.SIGNUP_SCREEN,
+      },
+    });
   };
 
   const login = () => {
-    // Navigation.push(this.props.componentId, {
-    //   component: {
-    //     id: NavigationScreens.LOGIN_SCREEN,
-    //     name: NavigationScreens.LOGIN_SCREEN,
-    //   },
-    // });
+    Navigation.push(props.componentId, {
+      component: {
+        name: Screens.LOGIN_SCREEN,
+      },
+    });
   };
   const theme = useTheme();
   const {styles} = createStyles(theme);
