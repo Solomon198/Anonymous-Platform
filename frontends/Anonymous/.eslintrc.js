@@ -28,6 +28,7 @@ module.exports = {
     },
     "ignorePatterns": [
         "*.svg",
-        "*.css"
+        "*.css",
+        "src/assets/"
     ]
 }
