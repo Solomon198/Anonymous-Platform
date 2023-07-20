@@ -1,9 +1,8 @@
 import { styled } from '@mui/material'
-import BgImage from '../../../assets/media/images/image3.jpeg'
 import { Text } from '@solex/ui-library'
 
 export const BackgroundImage = styled('div')({
-    backgroundImage: `url(${BgImage})`,
+    backgroundImage: `url(/assets/media/images/image3.jpeg)`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',

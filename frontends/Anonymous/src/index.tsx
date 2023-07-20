@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import ThemeProvider from './theme/index'
-import Login from './pages/login'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import router from './route.config'
+import getStore from './redux'
 import './i18n'
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
@@ -15,44 +18,18 @@ import '@fontsource/poppins/600.css'
 import '@fontsource/poppins/700.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Login />,
-        children: [
-            {
-                path: '/home',
-                element: <div>Home</div>,
-            },
-            {
-                path: '/features',
-                element: <div>Features</div>,
-            },
-            {
-                path: '/courses',
-                element: <div>Courses</div>,
-            },
-            {
-                path: '/about',
-                element: <div>About</div>,
-            },
-            {
-                path: '/support',
-                element: <div>Support</div>,
-            },
-            {
-                path: '/login',
-                element: <div>Login</div>,
-            },
-        ],
-    },
-])
+const { store, persistor } = getStore()
 
 root.render(
     <React.StrictMode>
-        <ThemeProvider>
-            <RouterProvider router={router} />
-        </ThemeProvider>
+        <Provider store={store}>
+            <PersistGate persistor={persistor} loading={null}>
+                <ThemeProvider>
+                    <Suspense fallback={null}>
+                        <RouterProvider router={router} />
+                    </Suspense>
+                </ThemeProvider>
+            </PersistGate>
+        </Provider>
     </React.StrictMode>
 )
