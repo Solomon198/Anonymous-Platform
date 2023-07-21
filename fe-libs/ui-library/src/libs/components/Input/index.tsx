@@ -3,8 +3,11 @@ import MaterialInput, { type InputProps } from '@mui/base/Input'
 import Error from '../Error'
 import { StyledInputElement, StyledInputRoot } from './default.styled'
 
+type CustomInputProps = {
+    errorMessage?: string
+} & InputProps
 const CustomInput = React.forwardRef(function CustomInput(
-    props: InputProps,
+    props: CustomInputProps,
     ref: React.ForwardedRef<HTMLDivElement>
 ) {
     const { slots, ...other } = props
@@ -28,15 +31,16 @@ const CustomInput = React.forwardRef(function CustomInput(
             <Error
                 touched={touched}
                 required={Boolean(props.required)}
-                name={props.name ?? 'input'}
-                error={Boolean(props.error)}
+                error={props.errorMessage ?? ''}
             />
         </div>
     )
 })
 
-const Input: React.FC<InputProps> = (props: InputProps): JSX.Element => {
+const Input: React.FC<CustomInputProps> = (
+    props: CustomInputProps
+): JSX.Element => {
     return <CustomInput {...props} />
 }
-export { type InputProps }
+export { type CustomInputProps }
 export default Input

@@ -2,18 +2,16 @@ import Text from '../Text'
 
 export interface IError {
     touched: boolean
-    error: boolean
-
-    name: string
+    error: string
 
     required: boolean
 }
 const Error = (props: IError): JSX.Element => {
-    const { touched, error, name, required } = props
-    if (touched && error && required) {
+    const { touched, error, required } = props
+    if (touched && Boolean(error) && required) {
         return (
             <Text color="red" variant="caption">
-                Invalid {name}
+                {error}
             </Text>
         )
     }
