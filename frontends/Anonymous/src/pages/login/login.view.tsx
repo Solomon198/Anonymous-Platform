@@ -47,6 +47,8 @@ const Login = (): JSX.Element => {
                         variant="contained"
                         style={{ width: 400 }}
                         onClick={handleSubmit}
+                        loading={authenticating}
+                        loaderSize={20}
                         disabled={authenticating}
                         text={t('common:admin-login:sign-in-button')}
                         sx={{
