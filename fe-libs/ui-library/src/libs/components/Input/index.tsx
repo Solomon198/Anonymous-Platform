@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MaterialInput, { type InputProps } from '@mui/base/Input'
-
+import Error from '../Error'
 import { StyledInputElement, StyledInputRoot } from './default.styled'
 
 const CustomInput = React.forwardRef(function CustomInput(
@@ -8,16 +8,30 @@ const CustomInput = React.forwardRef(function CustomInput(
     ref: React.ForwardedRef<HTMLDivElement>
 ) {
     const { slots, ...other } = props
+
+    const [touched, setTouched] = useState(false)
+
     return (
-        <MaterialInput
-            slots={{
-                root: StyledInputRoot,
-                input: StyledInputElement,
-                ...slots,
-            }}
-            {...other}
-            ref={ref}
-        />
+        <div>
+            <MaterialInput
+                slots={{
+                    root: StyledInputRoot,
+                    input: StyledInputElement,
+                    ...slots,
+                }}
+                {...other}
+                ref={ref}
+                onBlur={() => {
+                    setTouched(true)
+                }}
+            />
+            <Error
+                touched={touched}
+                required={Boolean(props.required)}
+                name={props.name ?? 'input'}
+                error={Boolean(props.error)}
+            />
+        </div>
     )
 })
 

@@ -51,6 +51,7 @@ const Button: React.FC<IButton> = (props: IButton): JSX.Element => {
         loadingPosition = LoadingPosition.end,
         variant = 'contained',
         loaderColor,
+        ...restProps
     } = props
 
     const adjustLoaderSize =
@@ -86,7 +87,8 @@ const Button: React.FC<IButton> = (props: IButton): JSX.Element => {
     )
     return (
         <MaterialButton
-            {...props}
+            {...restProps}
+            variant={variant}
             // Don't place this line above the rest props
             style={{
                 textTransform: 'capitalize',
