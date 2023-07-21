@@ -3,7 +3,7 @@
   "private": true,
   "workspaces": [
     "fe-libs/ui-library",
-    "frontends/anonymous"
+    "frontends/Anonymous"
   ],
   "lint-staged": {
     "**/*.{ts,tsx}": "tslint"

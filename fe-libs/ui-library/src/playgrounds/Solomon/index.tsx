@@ -35,6 +35,9 @@ const Playground: FC = () => {
                     style={{ width: 500, borderRadius: 30 }}
                     placeholder="Search with Icon"
                     endAdornment={IconRightComponent}
+                    required
+                    error={true}
+                    name="Email Address"
                 />
             </Box>
             <Box sx={{ display: 'flex', '& > * + *': { ml: 1 }, width: 500 }}>

@@ -8,6 +8,8 @@ import CheckBox, { type ICheckBoxProps } from './CheckBox'
 import Tab, { TabPanel, type ITab } from './Tab'
 import TextArea, { type ITextArea } from './TextArea'
 import Input from './Input'
+import Error from './Error'
+
 export * from './Theme'
 export { Loader } from './Loader'
 export { createIconContext, type IIconNames, type TIconNames } from './Icon'
@@ -21,3 +23,4 @@ export { CheckBox, type ICheckBoxProps }
 export { Tab, TabPanel, type ITab }
 export { TextArea, type ITextArea }
 export { Input }
+export { Error }
