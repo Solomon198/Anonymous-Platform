@@ -2,10 +2,9 @@ import { customRender, type RenderResult } from '../../utils/testing'
 import Error, { type IError } from './index'
 
 const defaultProps: IError = {
-    name: 'Email Address',
     required: true,
     touched: true,
-    error: true,
+    error: 'Invalid Email Address',
 }
 
 const getComponent = (defaultProps: IError): RenderResult =>

@@ -64,7 +64,8 @@
     "redux-persist": "^6.0.0",
     "redux-saga": "^1.2.3",
     "styled-components": "^5.3.11",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zod": "^3.21.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -86,6 +87,11 @@
     "**/*.{ts,tsx}": [
       "npm run lint"
     ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   },
   "browserslist": {
     "production": [

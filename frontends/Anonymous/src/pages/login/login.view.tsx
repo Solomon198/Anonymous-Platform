@@ -8,6 +8,7 @@ const Login = (): JSX.Element => {
         password,
         email,
         authenticating,
+        errors,
         handleSetEmail,
         handleSetPassword,
         handleSubmit,
@@ -15,7 +16,7 @@ const Login = (): JSX.Element => {
     return (
         <Grid style={{ height: '100vh' }} container>
             <Grid item xs={0} md={6}>
-                <BackgroundImage></BackgroundImage>
+                <BackgroundImage />
             </Grid>
             <Grid item md={6} xs={12}>
                 <FormContainer>
@@ -24,30 +25,34 @@ const Login = (): JSX.Element => {
                         value={email}
                         onChange={handleSetEmail}
                         type="email"
+                        required
+                        errorMessage={errors?.email?.message}
                         disabled={authenticating}
                         placeholder={
                             t(
                                 'common:admin-login:input-email-placeholder'
                             ) as unknown as string
                         }
-                        style={{ width: 400, marginBottom: 10 }}
+                        style={{ width: 400 }}
                     />
                     <Input
                         value={password}
                         type="password"
                         disabled={authenticating}
+                        required
+                        errorMessage={errors?.password?.message}
                         onChange={handleSetPassword}
                         placeholder={
                             t(
                                 'common:admin-login:input-password-placeholder'
                             ) as unknown as string
                         }
-                        style={{ width: 400, marginBottom: 10 }}
+                        style={{ width: 400, marginTop: 10 }}
                     />
 
                     <Button
                         variant="contained"
-                        style={{ width: 400 }}
+                        style={{ width: 400, marginTop: 10 }}
                         onClick={handleSubmit}
                         loading={authenticating}
                         loaderSize={20}
