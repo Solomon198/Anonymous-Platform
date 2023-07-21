@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
+import { ToastContainer } from 'react-toastify'
 import ThemeProvider from './theme/index'
 import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -8,6 +8,8 @@ import { PersistGate } from 'redux-persist/integration/react'
 import router from './route.config'
 import getStore from './redux'
 import { IntializeMocks } from './mockAPI'
+import 'react-toastify/dist/ReactToastify.css'
+import './index.css'
 import './i18n'
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
@@ -28,6 +30,7 @@ root.render(
                 <ThemeProvider>
                     <Suspense fallback={null}>
                         <RouterProvider router={router} />
+                        <ToastContainer />
                     </Suspense>
                 </ThemeProvider>
             </PersistGate>

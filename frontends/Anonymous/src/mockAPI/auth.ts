@@ -29,7 +29,7 @@ export function MockAuthServer(mockInstance: MockAdapter): void {
                     ) {
                         resolve([
                             200,
-                            { message: 'success', token: accessToken },
+                            { message: 'Login Success', token: accessToken },
                         ])
                     } else {
                         resolve([401, { message: 'Invalid email or password' }])
