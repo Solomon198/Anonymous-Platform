@@ -8,6 +8,10 @@ import ThemeProvider from '../../theme/index'
 import i18n from '../../i18n'
 import { initReactI18next } from 'react-i18next'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
+import { Provider as ReduxProvider } from 'react-redux'
+import configureStore from 'redux-mock-store'
+
+const store = configureStore([])
 
 beforeEach(async () => {
     await i18n.use(initReactI18next).init({
@@ -32,11 +36,16 @@ const getProvider = (
     const Provider: FC<{ children: React.ReactElement }> = ({ children }) => {
         return (
             <ThemeProvider>
-                <MemoryRouter initialEntries={initialRouteEntries ?? ['/']}>
-                    <Routes>
-                        <Route path={route ?? '/'} element={<>{children}</>} />
-                    </Routes>
-                </MemoryRouter>
+                <ReduxProvider store={store({})}>
+                    <MemoryRouter initialEntries={initialRouteEntries ?? ['/']}>
+                        <Routes>
+                            <Route
+                                path={route ?? '/'}
+                                element={<>{children}</>}
+                            />
+                        </Routes>
+                    </MemoryRouter>
+                </ReduxProvider>
             </ThemeProvider>
         )
     }

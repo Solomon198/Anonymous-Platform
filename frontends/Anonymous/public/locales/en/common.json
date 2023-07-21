@@ -6,7 +6,7 @@
       "title":"Login Admin",
       "input-email-placeholder": "Email Address",
       "input-password-placeholder": "Password",
-      "sign-in-button": "Sign in"
+      "sign-in-button": "Sign in "
   },
   "newsletterWidget": {
     "title": "Stay Tuned!",

@@ -12,7 +12,7 @@ const loginSlice = createSlice({
     reducers: {
         loginFailed(state, action) {
             state.isAuthenticating = false
-            state.loginFailedMessage = action.payload.message
+            // state.loginFailedMessage = action.payload.message
         },
         loginSuccess(state, action) {
             state.isAuthenticating = false
@@ -29,4 +29,4 @@ const loginSlice = createSlice({
 })
 
 export const { login, loginFailed, loginSuccess, logout } = loginSlice.actions
-export const { reducer: loginReducer } = loginSlice
+export const loginReducer = loginSlice.reducer
