@@ -24,6 +24,7 @@ const Login = (): JSX.Element => {
                         value={email}
                         onChange={handleSetEmail}
                         type="email"
+                        disabled={authenticating}
                         placeholder={
                             t(
                                 'common:admin-login:input-email-placeholder'
@@ -34,6 +35,7 @@ const Login = (): JSX.Element => {
                     <Input
                         value={password}
                         type="password"
+                        disabled={authenticating}
                         onChange={handleSetPassword}
                         placeholder={
                             t(
