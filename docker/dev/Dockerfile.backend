@@ -1,0 +1,44 @@
+# syntax=docker/dockerfile:1
+# From the rootdirectory of monorepo you can run
+#  docker build -t dixre/click-auth-service --build-arg SERVICE=backends/auth-service -f ./docker/dev/Dockerfile.backend ./backends/auth-service
+
+ARG BASE_REGISTRY="dixre/click-workspaces"
+ARG SERVICE
+ARG APP_ROOT="/srv/dixre"
+ARG ALPINE_VERSION="16-alpine"
+
+
+FROM ${BASE_REGISTRY} AS builder
+ARG APP_ROOT
+ARG SERVICE
+
+FROM node:${ALPINE_VERSION} as setup
+ARG APP_ROOT
+ARG SERVICE
+
+RUN apk --no-cache  --repository http://nl.alpinelinux.org/alpine/edge/testing --update add \
+    nss \
+    freetype \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    font-wqy-zenhei \
+    chromium \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR "${APP_ROOT}"
+
+COPY --link --from=builder "${APP_ROOT}/libs" "/libs"
+COPY --link --from=builder "${APP_ROOT}/node_modules" "/node_modules"
+COPY --link --from=builder "${APP_ROOT}/package*.json" ./
+COPY --link --from=builder  "${APP_ROOT}/eslint" "/eslint"
+
+WORKDIR "${APP_ROOT}/${SERVICE}"
+
+COPY package*.json .
+
+RUN npm install --no-audit
+
+COPY . . 
+
+CMD [ "npm", "start" ]

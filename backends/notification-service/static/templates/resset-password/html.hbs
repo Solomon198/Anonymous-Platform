@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Change Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Hi,</p>
+        <p>You have requested for your password to be changed.</p>
+        <p>The OTP to change your password is <strong>{{verificationCode}}</strong>.</p>
+        <p>Please ignore this message if you did not initiate this request.</p>
+    </div>
+</body>
+</html>

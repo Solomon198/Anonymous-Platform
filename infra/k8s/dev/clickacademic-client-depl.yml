@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anonymous-client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anonymous-client
+  template:
+    metadata:
+      labels:
+        app: anonymous-client
+    spec:
+      containers:
+        - name: anonymous-client
+          image: solexkal/anonymous-client
+          env:
+            - name: NODE_ENV
+              value: development
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anonymous-client-srv
+spec:
+  selector:
+    app: anonymous-client
+  ports:
+    - name: anonymous-client
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

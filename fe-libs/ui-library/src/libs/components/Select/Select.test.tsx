@@ -33,27 +33,23 @@ describe('Button', (): void => {
             ...defaultProps,
             placeholder,
         })
-        expect(getByRole('button', { name: placeholder })).toHaveTextContent(
-            placeholder
-        )
+        expect(getByRole('combobox')).toHaveTextContent(placeholder)
     })
 
     it('Should display default placeholder when a placeholder is not specified', (): void => {
         const { getByRole } = getComponent({
             ...defaultProps,
         })
-        expect(
-            getByRole('button', { name: defaultPlaceholder })
-        ).toHaveTextContent(defaultPlaceholder)
+        expect(getByRole('combobox')).toHaveTextContent(defaultPlaceholder)
     })
 
     it('Should select Option correctly', (): void => {
         const { getByRole } = getComponent(defaultProps)
-        fireEvent.mouseDown(getByRole('button', { name: defaultPlaceholder }))
+        fireEvent.mouseDown(getByRole('combobox'))
         const listBox = within(getByRole('listbox'))
         const option = defaultProps.data[0].label
         fireEvent.click(listBox.getByRole('option', { name: option }))
-        expect(getByRole('button')).toHaveTextContent(option)
+        expect(getByRole('combobox')).toHaveTextContent(option)
     })
 
     it('Sets arial label attribute correctly', (): void => {

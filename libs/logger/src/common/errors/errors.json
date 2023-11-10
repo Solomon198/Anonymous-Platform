@@ -1,0 +1,466 @@
+{
+  "AuthServiceInternalServerError": {
+    "code": "AUTH000",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "invalidLoginCredentials": {
+    "code": "AUTH001",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "Please enter signup credentials"
+    }
+  },
+  "accountAlreadyExist": {
+    "code": "AUTH002",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidAccountLoginBody": {
+    "code": "AUTH003",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidAccountCreationBody": {
+    "code": "AUTH004",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "UnableToCreateAccount": {
+    "code": "AUTH005",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "UserAwaitingVerification": {
+    "code": "AUTH006",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidVerifyAccountBody": {
+    "code": "AUTH007",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidVerificationCredential": {
+    "code": "AUTH008",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "LastOTPnotExpiredYet": {
+    "code": "AUTH009",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "UnableToUpdateAccount": {
+    "code": "AUTH010",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "emailAlreadyVerified": {
+    "code": "AUTH011",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "phoneNumberAlreadyVerified": {
+    "code": "AUTH012",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "invalidAccountUpdateBody": {
+    "code": "AUTH013",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "unauthorizedRequest": {
+    "code": "AUTH014",
+    "statusCode": 401,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "emailAlreadyExist": {
+    "code": "AUTH015",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "OTPcodeExpired": {
+    "code": "AUTH016",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidOTPRequestBodyCredentials": {
+    "code": "AUTH017",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "IncorrectOTPCode": {
+    "code": "AUTH018",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidOTPCredentials": {
+    "code": "AUTH019",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "AccountNotVerified": {
+    "code": "AUTH020",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "ExceededOTPTRetries": {
+    "code": "AUTH021",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "TermsNotAccepted": {
+    "code": "AUTH022",
+    "status": 400,
+    "message": {
+      "system": "terms not accepted",
+      "user": "terms not accepted"
+    }
+  },
+  "InvalidPasswordRessetBody": {
+    "code": "AUTH023",
+    "status": 400,
+    "message": {
+      "system": "terms not accepted",
+      "user": "terms not accepted"
+    }
+  },
+  "InvalidPasswordRessetOTPBody": {
+    "code": "AUTH024",
+    "status": 400,
+    "message": {
+      "system": "terms not accepted",
+      "user": "terms not accepted"
+    }
+  },
+  "RessetPasswordOTPcodeExpired": {
+    "code": "AUTH025",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidRessetPasswordOTPCredentials": {
+    "code": "AUTH026",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidRessetPasswordCredential": {
+    "code": "AUTH027",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RessetPasswordLastOTPNotExpired": {
+    "code": "AUTH028",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RessetPasswordUserNotVerified": {
+    "code": "AUTH029",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RessetPasswordOTPExpired": {
+    "code": "AUTH030",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RessetPasswordInvalidOTP": {
+    "code": "AUTH031",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotSendResetpasswordOTP": {
+    "code": "AUTH032",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RessetPasswordInvalid": {
+    "code": "AUTH033",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidResetPasswordToken": {
+    "code": "AUTH034",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotSendAccountRecoveryOTP": {
+    "code": "AUTH035",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidAccountRecoverRequestBody": {
+    "code": "AUTH036",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidAccountRecoveryRessetBody": {
+    "code": "AUTH037",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidRecoverAccountAuthToken": {
+    "code": "AUTH038",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "accountRecoveryOtpTimeout": {
+    "code": "AUTH039",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "InvalidAccountRecoveryCredential": {
+    "code": "AUTH040",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "AccountEmailNotVerified": {
+    "code": "AUTH041",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotSendAccountRecoveryVerificationCode": {
+    "code": "AUTH042",
+    "statusCode": 400,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotVerifyCode": {
+    "code": "AUTH043",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotUpdateUser": {
+    "code": "AUTH044",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotSendVerificationSMS": {
+    "code": "AUTH045",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CannotAccessRoute": {
+    "code": "AUTH046",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotUpdateRecoveryCredentials": {
+    "code": "AUTH047",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "CouldNotUpdateUserPassword": {
+    "code": "AUTH048",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "RouteNotFound": {
+    "code": "DEFAULT007",
+    "statusCode": 500,
+    "message": {
+      "system": "",
+      "user": "User Already Exist please try again"
+    }
+  },
+  "NotifInternalServierError": {
+    "code": "NOTIF000",
+    "statusCode": 500,
+    "message": {
+      "system": "Unable to send email OTP",
+      "user": "Unable to send email OTP"
+    }
+  },
+  "UnableToSendEmailOTP": {
+    "code": "NOTIF001",
+    "statusCode": 500,
+    "message": {
+      "system": "Unable to send email OTP",
+      "user": "Unable to send email OTP"
+    }
+  },
+  "UnableToSendSMSOTP": {
+    "code": "NOTIF002",
+    "statusCode": 500,
+    "message": {
+      "system": "Unable to send SMS OTP",
+      "user": "Unable to send SMS OTP"
+    }
+  },
+  "UserServiceInternalServerError": {
+    "code": "USER000",
+    "statusCode": 500,
+    "message": {
+      "system": "Internal Sever error",
+      "user": "Internal Sever error"
+    }
+  },
+  "UnableToCreateUserAccount": {
+    "code": "USER001",
+    "statusCode": 500,
+    "message": {
+      "system": "Internal Sever error",
+      "user": "Internal Sever error"
+    }
+  },
+  "UnableToUpdateUserAccount": {
+    "code": "USER002",
+    "statusCode": 500,
+    "message": {
+      "system": "Internal Sever error",
+      "user": "Internal Sever error"
+    }
+  },
+  "UnableToUpdateUserVerificationStatus": {
+    "code": "USER003",
+    "statusCode": 500,
+    "message": {
+      "system": "Internal Sever error",
+      "user": "Internal Sever error"
+    }
+  },
+  "UserNotFound": {
+    "code": "USER004",
+    "statusCode": 500,
+    "message": {
+      "system": "Internal Sever error",
+      "user": "Internal Sever error"
+    }
+  }
+}

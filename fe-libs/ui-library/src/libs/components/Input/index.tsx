@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MaterialInput, { type InputProps } from '@mui/base/Input'
+import { Input as MaterialInput, type InputProps } from '@mui/base/Input'
 import Error from '../Error'
 import { StyledInputElement, StyledInputRoot } from './default.styled'
 

@@ -1,4 +1,4 @@
-import TextareaAutosize from '@mui/base/TextareaAutosize'
+import { TextareaAutosize } from '@mui/base'
 import { styled } from '@mui/system'
 
 const grey = {

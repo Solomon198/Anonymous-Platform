@@ -1,0 +1,32 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/dev/*
+      - ./infra/k8s/common/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: solexkal/anonymous-client
+      context: ./frontends/Admin-Anonymous
+      docker:
+        dockerfile: ./docker/dev/Dockerfile.frontend
+      sync:
+        manual:
+          - src: "src/**/.{ts,tsx}"
+            dest: .
+    - image: solexkal/anonymous-backend
+      context: ./backends/Anonymous
+      docker:
+        dockerfile: ./docker/dev/Dockerfile.backend
+        buildArgs:
+          SERVICE: backends/auth-service
+    - image: solexkal/anonymous-notification-service
+      context: ./backends/notification-service
+      docker:
+        dockerfile: ./docker/dev/Dockerfile.backend
+        buildArgs:
+          SERVICE: backends/notification-service
+    

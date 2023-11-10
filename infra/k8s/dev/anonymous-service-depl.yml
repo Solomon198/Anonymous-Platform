@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anonymous-backend-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anonymous-backend
+  template:
+    metadata:
+      labels:
+        app: anonymous-backend
+    spec:
+      containers:
+        - name: anonymous-backend
+          image: solexkal/anonymous-backend
+          env:
+            - name: MONGO_URI
+              value: "mongodb://anonymous-mongo-srv:27017/anonymous"
+            - name: NATS_URL
+              value: http://nats-srv:4222
+            - name: NATS_CLUSTER_ID
+              value: clickacademic
+            - name: NODE_ENV
+              value: development
+            - name: OTP_WAITIME
+              value: "300"
+            - name: VERIFICATION_WAITIME
+              value: "86400"
+            - name: PASSWORD_RESSET_WAITIME
+              value: "3600"
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: anonymous-backend-srv
+spec:
+  selector:
+    app: anonymous-backend
+  ports:
+    - name: anonymous-backend
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

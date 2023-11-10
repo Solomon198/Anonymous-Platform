@@ -1,0 +1,16 @@
+name: test:ui-library
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "fe-libs/ui-library/**"
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout/@v2
+      - run: cd fe-libs/ui-library && npm install && npm run test:ci && npm run lint

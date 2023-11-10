@@ -1,0 +1,25 @@
+{
+  "verification": {
+    "email": "5822",
+    "phoneNumber": "8852",
+    "recoverAccount": "1671"
+  },
+  "signupCredentials": {
+    "phoneNumber": "09044554675",
+    "password": "wind-chime",
+    "gender": "male",
+    "firstName": "Dixre",
+    "lastName": "Enterprise",
+    "acceptedTerms": true,
+    "email": "Eveline.Williamson94@yahoo.com"
+  },
+  "session": {
+    "name": "session",
+    "value": "eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKd2FHOXVaVTUxYldKbGNpSTZJaUlzSW1WdFlXbHNJam9pUlhabGJHbHVaUzVYYVd4c2FXRnRjMjl1T1RSQWVXRm9iMjh1WTI5dElpd2lhV0YwSWpveE5qazJNelF5T1RjeExDSmxlSEFpT2pFMk9UWXpOREk1TnpSOS5lTVV5R2IyZm5uWVhYUzJETUNlenZ1LWRxUlNNc25WY1hMNVU0NHNFRThNIn0=",
+    "path": "/",
+    "secure": true,
+    "hostOnly": true,
+    "httpOnly": true,
+    "domain": "clickacademic.com"
+  }
+}

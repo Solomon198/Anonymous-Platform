@@ -1,0 +1,1 @@
+export { mailTrapClient } from "./sendMail";

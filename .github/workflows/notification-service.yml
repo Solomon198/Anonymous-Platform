@@ -1,0 +1,17 @@
+name: test:notification-backend
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "backends/notification-service/**"
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout/@v2
+      - run: npm ci && npm run build --workspaces
+      - run: cd backends/notification-service && npm install && npm run test:ci
