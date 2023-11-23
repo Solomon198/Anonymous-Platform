@@ -5,16 +5,20 @@
     },
     "login":{
         "google-sign-in": "Sign in with Google",
-        "twitter-sign-in": "Sign in with Google",
-        "facebook-sign-in": "Sign in with Google",
+        "twitter-sign-in": "Sign in with Twitter",
+        "facebook-sign-in": "Sign in with Facebook",
         "no-account": "Don't have an account ? "
     },
     "signup":{
         "google-sign-up": "Sign up with Google",
-        "twitter-sign-up": "Sign up with Google",
-        "facebook-sign-up": "Sign up with Google",
+        "twitter-sign-up": "Sign up with Twitter",
+        "facebook-sign-up": "Sign up with Facebook",
         "have-account": "Already have an account ? "
     },
+    "auth-continue-btn": "Continue",
+    "email-placeholder": "Email Address",
+    "password-placeholder": "Password",
+    "password-description":"Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character",
     "create-account": "Create Account",
     "register":"Register",
     "signin": "Sign in",

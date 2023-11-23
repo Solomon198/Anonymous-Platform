@@ -16,18 +16,13 @@ type Props = {
   componentId: string;
 };
 export default function InitScreen(props: Props) {
-  const createAccount = () => {
+  const gotoAuth = (isSignup: boolean) => {
     Navigation.push(props.componentId, {
       component: {
-        name: Screens.SIGNUP_SCREEN,
-      },
-    });
-  };
-
-  const login = () => {
-    Navigation.push(props.componentId, {
-      component: {
-        name: Screens.LOGIN_SCREEN,
+        name: Screens.AUTH_SCREEN,
+        passProps: {
+          isSignup,
+        },
       },
     });
   };
@@ -53,11 +48,13 @@ export default function InitScreen(props: Props) {
 
         <View style={styles.btnGroup}>
           <TouchableOpacity
-            onPress={() => createAccount()}
+            onPress={() => gotoAuth(true)}
             style={styles.btnLeft}>
             <Text style={styles.btnText}>{t('common:register')}</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => login()} style={styles.btnRight}>
+          <TouchableOpacity
+            onPress={() => gotoAuth(false)}
+            style={styles.btnRight}>
             <Text style={styles.btnText}>{t('common:signin')}</Text>
           </TouchableOpacity>
         </View>

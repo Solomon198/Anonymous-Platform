@@ -6,8 +6,7 @@ import {NativeBaseProvider} from 'native-base';
 import getStore from '../redux/store';
 import {Screens} from './screens';
 import IntroScreen from '../screens/Intro';
-import LoginScreen from '../screens/login';
-import SignupScreen from '../screens/signup';
+import SignupScreen from '../screens/auth';
 import {ThemeProvider} from '../theme';
 
 export const {persistor, store} = getStore();
@@ -36,11 +35,7 @@ export function IntializeApplicationScreens() {
     Wrapper(IntroScreen),
   );
 
-  Navigation.registerComponent(Screens.LOGIN_SCREEN, () =>
-    Wrapper(LoginScreen),
-  );
-
-  Navigation.registerComponent(Screens.SIGNUP_SCREEN, () =>
+  Navigation.registerComponent(Screens.AUTH_SCREEN, () =>
     Wrapper(SignupScreen),
   );
 }

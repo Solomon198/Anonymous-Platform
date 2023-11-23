@@ -12,3 +12,8 @@ export enum SUPPORTED_NAMESPACES {
 }
 
 export const NAMESPACES = Object.values(SUPPORTED_NAMESPACES);
+
+export enum AuthMode {
+  SIGNUP = 'SIGNUP',
+  SIGNIN = 'SIGNIN',
+}

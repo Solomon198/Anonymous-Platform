@@ -15,17 +15,8 @@ const ScreenStyles = (theme: TTheme) => {
     },
 
     btnText: {
-      fontWeight: '500',
-      fontSize: 16,
-      color: text.secondary,
       marginLeft: 10,
-    },
-
-    safeArea: {
-      flex: 1,
-      backgroundColor: backgrounds.appPrimary,
-      justifyContent: 'space-evenly',
-      alignContent: 'space-between',
+      color: text.secondary,
     },
 
     img: {
@@ -33,29 +24,16 @@ const ScreenStyles = (theme: TTheme) => {
       height: 170,
       borderRadius: 200,
     },
-    imgContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      alignContent: 'center',
-      justifyContent: 'center',
-    },
+
     drawLeft: {
       marginLeft: -40,
     },
     btnLeft: {
       backgroundColor: backgrounds.appSecondary,
-      paddingVertical: 20,
-      borderRadius: 30,
       width: width - 50,
-      marginHorizontal: 20,
-      justifyContent: 'center',
-      alignContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'row',
-      marginVertical: 5,
     },
     googleIco: {
-      color: '#DB4437',
+      color: '#DB4437' as any,
     },
     twitter: {
       color: '#1DA1F2',
@@ -63,21 +41,20 @@ const ScreenStyles = (theme: TTheme) => {
     facebook: {
       color: '#4267B2',
     },
+    input: {
+      backgroundColor: backgrounds.appSecondary,
+      marginVertical: 5,
+      paddingHorizontal: 20,
+      paddingVertical: 17,
+      fontSize: 15,
+      color: text.primary,
+      borderRadius: 13,
+      flexGrow: 1,
+    },
     loginsContainers: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignContent: 'center',
-    },
-    textContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    createAccountText: {
-      fontSize: 16,
-    },
-    createAccountSubText: {
-      fontWeight: 'bold',
-      color: theme.primary.main,
+      // justifyContent: 'center',
+      // alignItems: 'center',
+      // alignContent: 'center',
     },
     appTitle: {
       textAlign: 'center',
