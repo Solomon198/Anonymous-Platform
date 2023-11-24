@@ -20,7 +20,7 @@ beforeAll(async () => {
     fallbackLng: SUPPORTED_LANGUAGES.en,
     supportedLngs: LANGUAGES,
     ns: NAMESPACES,
-    debug: true,
+    debug: false,
     defaultNS: SUPPORTED_NAMESPACES.common,
     fallbackNS: SUPPORTED_NAMESPACES.common,
     resources: {},
