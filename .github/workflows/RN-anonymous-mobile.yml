@@ -1,0 +1,17 @@
+name: test:RN-anonymous-mobile-frontend
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "frontends/RN-mobile-Anonymous/**"
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout/@v2
+      - run: cd frontends/RN-mobile-Anonymous && npm install && npm run test:ci
