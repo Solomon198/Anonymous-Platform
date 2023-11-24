@@ -1,17 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  View,
-  TouchableNativeFeedback,
-  Image,
-} from 'react-native';
-import {Text} from 'native-base';
+import {SafeAreaView, StatusBar, Image} from 'react-native';
 import {useTheme} from '../../theme';
 import createStyle from './style.css';
 // @ts-ignore
 import {useTranslation} from 'react-i18next';
 import {AuthMode} from '../../../utils';
+import {Text, Container, Link} from '../../components';
 
 interface Props {
   isSignup: boolean;
@@ -44,38 +38,40 @@ const AuthHOC = (AuthComponent: any) => {
     return (
       <SafeAreaView style={styles.safeArea}>
         <StatusBar backgroundColor={theme.primary.main} />
-        <View style={styles.imgContainer}>
+        <Container style={styles.imgContainer}>
           <Image
             resizeMethod="resize"
             resizeMode="contain"
             style={styles.img}
+            accessibilityLabel="adult Image"
             source={require('../../../assets/media/images/image3.jpeg')}
           />
 
           <Image
             resizeMethod="resize"
             resizeMode="contain"
+            accessibilityLabel="teanager Image"
             style={[styles.img, styles.drawLeft]}
             source={require('../../../assets/media/images/man.jpeg')}
           />
-        </View>
+        </Container>
 
         <AuthComponent {...combinedProps} />
 
-        <View style={styles.textContainer}>
-          <Text style={styles.createAccountText}>
-            {t(
-              isSignup
-                ? 'common:signup:have-account'
-                : 'common:login:no-account',
-            )}
-            <TouchableNativeFeedback onPress={handleAuthMode}>
-              <Text style={styles.createAccountSubText}>
-                {t(isSignup ? 'common:signin' : 'common:create-account')}
-              </Text>
-            </TouchableNativeFeedback>
-          </Text>
-        </View>
+        {!props.hideBottomLink && (
+          <Container style={styles.textContainer}>
+            <Text style={styles.createAccountText}>
+              {t(
+                isSignup
+                  ? 'common:signup:have-account'
+                  : 'common:login:no-account',
+              )}
+            </Text>
+            <Link style={styles.link} onPress={handleAuthMode}>
+              {t(isSignup ? 'common:signin' : 'common:create-account')}
+            </Link>
+          </Container>
+        )}
       </SafeAreaView>
     );
   };

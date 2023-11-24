@@ -27,11 +27,12 @@ const ScreenStyles = (theme: TTheme) => {
     textContainer: {
       justifyContent: 'center',
       alignItems: 'center',
+      flexDirection: 'row',
     },
     createAccountText: {
-      fontSize: 16,
+      fontSize: 15,
     },
-    createAccountSubText: {
+    link: {
       fontWeight: 'bold',
       color: theme.primary.main,
     },

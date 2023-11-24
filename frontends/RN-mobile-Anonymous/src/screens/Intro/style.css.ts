@@ -55,6 +55,7 @@ const ScreenStyles = (theme: TTheme) => {
       paddingVertical: 20,
       borderColor: backgrounds.appSecondary,
       borderWidth: 1,
+      borderRadius: 0,
       borderTopRightRadius: 20,
       borderBottomRightRadius: 20,
     },

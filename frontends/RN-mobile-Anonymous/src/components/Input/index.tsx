@@ -1,17 +1,28 @@
 import React, {useState} from 'react';
-import {TextInput, TextInputProps, View, StyleSheet, Text} from 'react-native';
-// @ts-ignore
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import {TextInput, TextInputProps, StyleSheet} from 'react-native';
+import {Text, Container} from '..';
 import {useTheme} from '../../theme';
+import {Icon} from '..';
 
-interface Input extends TextInputProps {
+export interface Props extends TextInputProps {
   inputDetails?: string;
 
   error?: string | undefined;
+  inputTestID?: string;
+  iconTestID?: string;
 }
 
-const Input = (props: Input) => {
-  const {onChangeText, error, inputDetails, ...restProps} = props;
+const Input = (props: Props) => {
+  const {
+    onChangeText,
+    error,
+    inputDetails,
+    inputTestID,
+    testID,
+    iconTestID,
+    value,
+    ...restProps
+  } = props;
   const {error: errorColor, backgrounds, text} = useTheme();
   const [inputValue, setValue] = useState<string>('');
 
@@ -22,18 +33,26 @@ const Input = (props: Input) => {
     setValue(textValue);
   };
 
+  //1. Input component don't maintain internal state and we need to pass control of value to user
+  //2. Doing this gives the component a behaviour of internal state and controlled input
+  const textInputValue = value || inputValue;
+
   return (
-    <View style={styles.mainContainer}>
-      <View style={styles.inputContainer}>
+    <Container testID={testID} style={styles.mainContainer}>
+      <Container style={styles.inputContainer}>
         <TextInput
+          value={textInputValue}
+          testID={inputTestID}
           placeholderTextColor={text.secondary}
           {...restProps}
           onChangeText={handleInputChange}
         />
-        {inputValue && (
-          <AntDesign
+        {textInputValue && (
+          <Icon
             name={error === undefined ? 'checkcircle' : 'closecircle'}
+            type="AntDesign"
             size={20}
+            testID={iconTestID}
             style={[
               styles.ico,
               {
@@ -43,13 +62,13 @@ const Input = (props: Input) => {
             ]}
           />
         )}
-      </View>
-      {inputValue && inputDetails && error && (
+      </Container>
+      {textInputValue && inputDetails && error && (
         <Text style={[styles.inputDescription, {color: text.secondary}]}>
           {inputDetails}
         </Text>
       )}
-    </View>
+    </Container>
   );
 };
 

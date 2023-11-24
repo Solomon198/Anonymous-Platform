@@ -1,6 +1,6 @@
 import React, {createContext, useCallback, useContext, useMemo} from 'react';
 import {MODES, LIGHT_THEME, DARK_THEME} from './const';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector, useDispatch, shallowEqual} from 'react-redux';
 import {TTheme, IStore} from '../../types';
 import {toggleTheme} from './reducer';
 
@@ -11,10 +11,13 @@ export const Context = createContext({
 
 export const ThemeProvider = ({children}: any) => {
   const dispatch = useDispatch();
-  const {mode} = useSelector((store: IStore) => ({
-    mode: store.theme.mode,
-    store,
-  }));
+  const {mode} = useSelector(
+    (store: IStore) => ({
+      mode: store.theme.mode,
+    }),
+    shallowEqual,
+  );
+
   const ToggleTheme = useCallback(() => {
     dispatch(toggleTheme());
     // eslint-disable-next-line react-hooks/exhaustive-deps

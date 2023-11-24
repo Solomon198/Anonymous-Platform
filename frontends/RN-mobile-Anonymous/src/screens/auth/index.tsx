@@ -1,14 +1,15 @@
 import React from 'react';
-import {View} from 'react-native';
 import {Button, Input} from '../../components';
-import {Heading} from 'native-base';
+import {Text, Container} from '../../components';
 import {useTheme} from '../../theme';
+import {Navigation} from 'react-native-navigation';
 import createStyle from './style.css';
 // @ts-ignore
 import {useTranslation} from 'react-i18next';
 import AuthHOC from '../HOCs/authHoc';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import {Screens} from '../../navigation';
 
 const AuthSchema = Yup.object().shape({
   password: Yup.string()
@@ -28,12 +29,29 @@ const Auth = (props: Props) => {
   const {styles} = createStyle(theme);
   const {isSignup} = props;
 
+  const gotoVerification = () => {
+    Navigation.push(props.componentId, {
+      component: {
+        name: Screens.SOCIAL_VERIFICATION,
+        passProps: {
+          hideBottomLink: true,
+        },
+      },
+    });
+  };
+
+  const handleIsValid = (
+    isValid: boolean,
+    values: {email: string; password: string},
+  ) => {
+    return isValid && values.email?.trim() && values.password?.trim();
+  };
   return (
     <>
-      <View style={[styles.loginsContainers]}>
-        <Heading size="lg" style={styles.appTitle}>
+      <Container style={[styles.loginsContainers]}>
+        <Text style={styles.appTitle}>
           {t(isSignup ? 'common:signup-account' : 'common:signin')}
-        </Heading>
+        </Text>
         <Formik
           onSubmit={values => {
             console.log(values);
@@ -41,7 +59,7 @@ const Auth = (props: Props) => {
           validateOnMount
           validationSchema={AuthSchema}
           initialValues={{email: '', password: ''}}>
-          {({handleBlur, handleChange, errors, isValid}) => (
+          {({handleBlur, handleChange, errors, isValid, values}) => (
             <>
               <Input
                 error={errors.email}
@@ -65,15 +83,16 @@ const Auth = (props: Props) => {
               <Button
                 style={{
                   ...styles.btnLeft,
-                  backgroundColor: isValid
+                  backgroundColor: handleIsValid(isValid, values)
                     ? theme.primary.main
                     : theme.backgrounds.inputColor,
                 }}
+                onPress={gotoVerification}
                 disabled={!isValid}
                 iconName="login"
                 icoStyle={
                   {
-                    color: isValid
+                    color: handleIsValid(isValid, values)
                       ? theme.backgrounds.webPrimary
                       : theme.text.secondary,
                   } as any
@@ -82,7 +101,7 @@ const Auth = (props: Props) => {
                 btnTextStyle={
                   {
                     ...styles.btnText,
-                    color: isValid
+                    color: handleIsValid(isValid, values)
                       ? theme.backgrounds.webPrimary
                       : theme.text.secondary,
                   } as any
@@ -91,7 +110,7 @@ const Auth = (props: Props) => {
             </>
           )}
         </Formik>
-      </View>
+      </Container>
     </>
   );
 };

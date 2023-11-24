@@ -1,23 +1,27 @@
 import React from 'react';
 import {
   TouchableOpacity,
-  Text,
+  TouchableOpacityProps,
   StyleSheet,
   StyleProp,
   ViewStyle,
+  TextStyle,
 } from 'react-native';
-// @ts-ignore
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useTheme} from '../../theme';
+import {Text, Icon, Container, ActivityIndicator} from '..';
 
-interface Props {
+export interface Props extends TouchableOpacityProps {
   value: string;
-  iconName: string;
+  iconName?: string;
 
   disabled?: boolean;
-  icoStyle?: StyleProp<ViewStyle>;
+  icoStyle?: StyleProp<TextStyle> | any;
   style?: StyleProp<ViewStyle>;
-  btnTextStyle?: StyleProp<ViewStyle>;
+  btnTextStyle?: StyleProp<TextStyle>;
+  iconTestID?: string;
+  isLoading?: boolean;
+  loaderSize?: number | 'small' | 'large' | undefined;
+  loaderColor?: string;
 }
 
 const Button = ({
@@ -25,18 +29,42 @@ const Button = ({
   iconName,
   btnTextStyle,
   icoStyle,
-  style,
+  iconTestID,
   disabled,
+  style,
+  isLoading,
+  loaderSize,
+  loaderColor,
+  ...props
 }: Props) => {
   const {text} = useTheme();
   return (
-    <TouchableOpacity disabled={disabled} style={[styles.btn, style]}>
-      <AntDesign
-        size={26}
-        name={iconName}
-        style={[{color: text.secondary}, icoStyle]}
-      />
+    <TouchableOpacity
+      accessibilityRole="button"
+      disabled={disabled}
+      {...props}
+      style={[styles.btn, style]}>
+      <Container style={styles.icoContainer}>
+        {iconName && (
+          <Icon
+            size={26}
+            testID={iconTestID}
+            name={iconName}
+            type="AntDesign"
+            style={[{color: text.secondary}, icoStyle]}
+          />
+        )}
+      </Container>
       <Text style={[styles.btnText, btnTextStyle]}>{value}</Text>
+      <Container>
+        {isLoading && (
+          <ActivityIndicator
+            accessibilityLabel="progressbar"
+            color={loaderColor}
+            size={loaderSize || 'large'}
+          />
+        )}
+      </Container>
     </TouchableOpacity>
   );
 };
@@ -49,12 +77,14 @@ const styles = StyleSheet.create({
   btn: {
     paddingVertical: 20,
     borderRadius: 30,
-    marginHorizontal: 20,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
     marginVertical: 5,
+  },
+  icoContainer: {
+    backgroundColor: 'transparent',
   },
 });
 

@@ -31,6 +31,7 @@ const ScreenStyles = (theme: TTheme) => {
     btnLeft: {
       backgroundColor: backgrounds.appSecondary,
       width: width - 50,
+      alignSelf: 'center',
     },
     googleIco: {
       color: '#DB4437' as any,
